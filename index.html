@@ -11,6 +11,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
   <style>
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-RegularIt.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-MediumIt.woff2') format('woff2'); font-weight: 500; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-Semibold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-SemiboldIt.woff2') format('woff2'); font-weight: 600; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-BoldIt.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-Book.woff2') format('woff2'); font-weight: 350; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-BookIt.woff2') format('woff2'); font-weight: 350; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-LightIt.woff2') format('woff2'); font-weight: 300; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-Thin.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-ThinIt.woff2') format('woff2'); font-weight: 200; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-Hairline.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-HairlineIt.woff2') format('woff2'); font-weight: 100; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('Fonts/web files/SuisseIntl-BlackIt.woff2') format('woff2'); font-weight: 900; font-style: italic; font-display: swap; }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -43,7 +62,7 @@
       --purple-900: #170C33;
       --accent: #AA8BFF;
 
-      --font: 'General Sans', 'PP Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font: 'Suisse Intl', 'General Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --ease: cubic-bezier(0.4, 0, 0.2, 1);
       --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -349,7 +368,7 @@
     }
 
     .tile-title {
-      font-size: clamp(24px, 3vw, 40px);
+      font-size: clamp(20px, 2.5vw, 36px);
       font-weight: 500;
       letter-spacing: -0.03em;
       line-height: 1;
@@ -409,9 +428,11 @@
     .tile[data-id="imagery"]:hover .tile-bg {
       background: transparent !important;
     }
+    .tile[data-id="imagery"] .tile-title { color: #2D1866; }
     .tile[data-id="imagery"]:hover { color: #442599 !important; }
-    .tile[data-id="imagery"] .tile-content { opacity: 0; transition: opacity 0.4s var(--ease); }
-    .tile[data-id="imagery"]:hover .tile-content { opacity: 1; }
+    .tile[data-id="imagery"] .tile-content { opacity: 1; }
+    .tile[data-id="imagery"] .tile-arrow { opacity: 0; }
+    .tile[data-id="imagery"]:hover .tile-arrow { opacity: 1; }
 
     /* ---- Individual tile colors ---- */
     .tile[data-id="framework"]  { color: #fff; }
@@ -636,21 +657,24 @@
     }
 
     .sidebar-back {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 6px;
       font-size: 13px;
-      font-weight: 500;
-      color: var(--text-tertiary);
+      font-weight: 600;
+      color: #442599;
+      background: #E0E3F0;
       margin-bottom: 32px;
-      padding: 6px 12px;
-      border-radius: 6px;
+      padding: 8px 16px;
+      border-radius: 11px;
       transition: all 0.2s;
       cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 0.02em;
     }
 
-    .sidebar-back:hover { color: var(--text-primary); background: var(--bg-surface); }
-    .sidebar-back svg { width: 14px; height: 14px; }
+    .sidebar-back:hover { color: #442599; background: #D7D8E1; }
+    .sidebar-back svg { width: 14px; height: 14px; stroke: #442599; }
 
     .sidebar-label {
       font-size: 11px;
@@ -2021,7 +2045,7 @@
       {
         id: 'framework', number: '01', title: 'Framework', color: 'var(--tile-framework)',
         desc: 'Design strategy, principles, and foundational brand concepts.',
-        svg: `<img src="./assets/Guidelines/Background.png?v=3" alt="Framework" class="tile-cover-img tile-cover-default"/><img src="./assets/Guidelines/framework.png?v=2" alt="Framework" class="tile-cover-img tile-cover-hover"/>`,
+        svg: `<img src="./assets/Guidelines/Background.png?v=3" alt="Framework" class="tile-cover-img tile-cover-default"/><img src="./assets/Guidelines/framework-hover.png" alt="Framework" class="tile-cover-img tile-cover-hover"/>`,
         customLayout: true,
         sections: [
           { id: 'overview', title: 'Overview' },
@@ -2603,7 +2627,7 @@
             </a>
 
             <h1 class="content-title">Typography</h1>
-            <p class="content-subtitle" style="border:none;padding-bottom:0;margin-bottom:0">PP Neue Montreal is our single typeface. It handles everything from hero headlines to UI micro-copy.</p>
+            <p class="content-subtitle" style="border:none;padding-bottom:0;margin-bottom:0">Suisse Int'l is our single typeface. It handles everything from hero headlines to UI micro-copy.</p>
             <div class="tabpage-tabs" id="typeTabs">
               <button class="color-tab active" data-tab="typeface" data-tabgroup="type">Typeface</button>
               <button class="color-tab" data-tab="headings" data-tabgroup="type">Headings</button>
@@ -2615,18 +2639,38 @@
           <!-- Typeface -->
           <div class="color-tab-panel active" id="ttab-typeface">
             <div class="type-hero">
-              <div class="type-hero-name">PP Neue Montreal</div>
-              <div class="type-hero-foundry">Pangram Pangram Foundry &middot; Sans-serif</div>
+              <div class="type-hero-name">Suisse Int'l</div>
+              <div class="type-hero-foundry">Swiss Typefaces &middot; Sans-serif</div>
             </div>
 
             <div class="color-family">
               <div class="color-family-header">
                 <span class="color-family-name">Weights</span>
-                <span class="color-family-count">3 weights</span>
+                <span class="color-family-count">9 weights</span>
               </div>
             </div>
 
             <div class="type-weights-grid">
+              <div class="type-weight-card">
+                <div class="type-weight-card-preview" style="font-weight:100">Ag</div>
+                <div class="type-weight-card-name">Hairline</div>
+                <div class="type-weight-card-value">100</div>
+              </div>
+              <div class="type-weight-card">
+                <div class="type-weight-card-preview" style="font-weight:200">Ag</div>
+                <div class="type-weight-card-name">Thin</div>
+                <div class="type-weight-card-value">200</div>
+              </div>
+              <div class="type-weight-card">
+                <div class="type-weight-card-preview" style="font-weight:300">Ag</div>
+                <div class="type-weight-card-name">Light</div>
+                <div class="type-weight-card-value">300</div>
+              </div>
+              <div class="type-weight-card">
+                <div class="type-weight-card-preview" style="font-weight:350">Ag</div>
+                <div class="type-weight-card-name">Book</div>
+                <div class="type-weight-card-value">350</div>
+              </div>
               <div class="type-weight-card">
                 <div class="type-weight-card-preview" style="font-weight:400">Ag</div>
                 <div class="type-weight-card-name">Regular</div>
@@ -2642,6 +2686,16 @@
                 <div class="type-weight-card-name">Semibold</div>
                 <div class="type-weight-card-value">600</div>
               </div>
+              <div class="type-weight-card">
+                <div class="type-weight-card-preview" style="font-weight:700">Ag</div>
+                <div class="type-weight-card-name">Bold</div>
+                <div class="type-weight-card-value">700</div>
+              </div>
+              <div class="type-weight-card">
+                <div class="type-weight-card-preview" style="font-weight:900">Ag</div>
+                <div class="type-weight-card-name">Black</div>
+                <div class="type-weight-card-value">900</div>
+              </div>
             </div>
 
             <div class="color-family" style="margin-top:40px">
@@ -2650,7 +2704,7 @@
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Do</strong> — Use PP Neue Montreal for all text across all platforms and touchpoints. No other typeface is needed.</span>
+                <span><strong>Do</strong> — Use Suisse Int'l for all text across all platforms and touchpoints. No other typeface is needed.</span>
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -2658,7 +2712,7 @@
               </div>
               <div class="color-tip">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span><strong>Don't</strong> — Never substitute with Helvetica, Arial, or any other sans-serif. The brand relies on PP Neue Montreal's specific character.</span>
+                <span><strong>Don't</strong> — Never substitute with Helvetica, Arial, or any other sans-serif. The brand relies on Suisse Int'l's specific character.</span>
               </div>
             </div>
           </div>
