@@ -2829,7 +2829,9 @@
               <button class="color-tab active" data-tab="typeface" data-tabgroup="type">Typeface</button>
               <button class="color-tab" data-tab="headings" data-tabgroup="type">Headings</button>
               <button class="color-tab" data-tab="body" data-tabgroup="type">Body</button>
-              <button class="color-tab" data-tab="ui" data-tabgroup="type">UI Styles</button>
+              <button class="color-tab" data-tab="ui" data-tabgroup="type">UI & Labels</button>
+              <button class="color-tab" data-tab="data" data-tabgroup="type">Data & Stats</button>
+              <button class="color-tab" data-tab="code" data-tabgroup="type">Code & Mono</button>
             </div>
           </div>
 
@@ -2919,17 +2921,17 @@
             <div class="color-family">
               <div class="color-family-header">
                 <span class="color-family-name">Heading Scale</span>
-                <span class="color-family-count">5 levels</span>
+                <span class="color-family-count">6 levels</span>
               </div>
-              <p class="section-desc" style="margin-top:-8px">Headings use Medium (500) weight with tight letter-spacing for impact. H4 uses Regular (400) for a lighter feel.</p>
+              <p class="section-desc" style="margin-top:-8px">All headings use Suisse Int'l <strong>Light (300)</strong> with very tight letter-spacing — the defining editorial voice of Dfns. Source: Figma Master Material.</p>
             </div>
 
-            ${specimen('<span style="font-weight:350;color:var(--h1-emphasis)">Your Banking Systems</span> <span style="font-weight:400;color:var(--h1-light)">Support Blockchains</span>', 'font-size:42px;line-height:1.19;letter-spacing:-0.0095em', ['H1 Dual', '42px', 'Book 350 + Regular 400', 'Line 1.19'], 'Hero sections — two weights, two colors')}
-            ${specimen('The quick brown fox', 'font-size:55px;font-weight:500;line-height:1.15;letter-spacing:-0.03em', ['H1', '55px', 'Weight 500', 'Line 1.15'], 'Hero sections, landing page headlines')}
-            ${specimen('The quick brown fox jumps', 'font-size:48px;font-weight:500;line-height:1.125;letter-spacing:-0.02em', ['H2', '48px', 'Weight 500', 'Line 1.125'], 'Main page sections')}
-            ${specimen('The quick brown fox jumps over', 'font-size:40px;font-weight:500;line-height:1.2;letter-spacing:-0.02em', ['H3', '40px', 'Weight 500', 'Line 1.2'], 'Sub-sections')}
-            ${specimen('The quick brown fox jumps over the lazy', 'font-size:32px;font-weight:400;line-height:1.25;letter-spacing:-0.01em', ['H4', '32px', 'Weight 400', 'Line 1.25'], 'Card titles, modules')}
-            ${specimen('The quick brown fox jumps over the lazy dog', 'font-size:24px;font-weight:500;line-height:1.33', ['H5', '24px', 'Weight 500', 'Line 1.33'], 'Small titles, important labels')}
+            ${specimen('One Operating Infrastructure', 'font-size:96px;font-weight:500;line-height:1.1;letter-spacing:-0.02em', ['Display', '96px', 'Weight 500', 'Line 1.1', 'LS −2%'], 'Full-bleed hero, editorial covers, key brand moments')}
+            ${specimen('<span style="font-weight:300;color:var(--h1-emphasis)">One Operating</span> <span style="font-weight:300;color:var(--h1-light)">Infrastructure</span>', 'font-size:50px;line-height:1.1;letter-spacing:-0.0196em', ['H1', '50px', 'Light 300', 'Line 1.1', 'LS −1.96%'], 'Page hero, landing section title — dual-tone optional')}
+            ${specimen('One Operating Infrastructure to Do Everything', 'font-size:40px;font-weight:300;line-height:1.1;letter-spacing:-0.0245em', ['H2', '40px', 'Light 300', 'Line 1.1', 'LS −2.45%'], 'Section titles, feature headings, page sub-hero')}
+            ${specimen('One Operating Infrastructure to Do Everything Onchain', 'font-size:30px;font-weight:300;line-height:1.15;letter-spacing:-0.03em', ['H3', '30px', 'Light 300', 'Line 1.15', 'LS −3%'], 'Sub-section titles, card headers, modal titles')}
+            ${specimen('One Operating Infrastructure to Do Everything Onchain across your stack', 'font-size:22px;font-weight:300;line-height:1.1;letter-spacing:-0.0445em', ['H4', '22px', 'Light 300', 'Line 1.1', 'LS −4.45%'], 'Widget titles, sidebar headers, list group labels')}
+            ${specimen('One Operating Infrastructure to Do Everything Onchain across your entire stack', 'font-size:16px;font-weight:300;line-height:1.2;letter-spacing:-0.02em', ['H5', '16px', 'Light 300', 'Line 1.2', 'LS −2%'], 'Table headers, panel headings, compact section labels')}
 
             <div class="color-family" style="margin-top:40px">
               <div class="color-family-header">
@@ -2937,11 +2939,19 @@
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Do</strong> — Maintain a clear hierarchy. Never skip heading levels (e.g., H1 directly to H4).</span>
+                <span><strong>Do</strong> — Use Light (300) exclusively for all headings. The contrast between Light headings and Regular body is the core of the typographic system.</span>
+              </div>
+              <div class="color-tip" style="margin-bottom:10px">
+                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Do</strong> — Maintain the negative letter-spacing. It tightens at smaller sizes (H4: −4.45%) to preserve optical density.</span>
+              </div>
+              <div class="color-tip" style="margin-bottom:10px">
+                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Do</strong> — Apply dual-tone on H1 hero headlines: primary words in <code class="code-inline">--h1-emphasis</code>, secondary in <code class="code-inline">--h1-light</code>.</span>
               </div>
               <div class="color-tip">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span><strong>Don't</strong> — Don't use more than two heading levels on a single screen to avoid visual noise.</span>
+                <span><strong>Don't</strong> — Never use Medium (500) or Semibold (600) for headings. Reserve heavier weights for Display and UI elements only.</span>
               </div>
             </div>
           </div>
@@ -2951,16 +2961,17 @@
             <div class="color-family">
               <div class="color-family-header">
                 <span class="color-family-name">Body Scale</span>
-                <span class="color-family-count">5 sizes</span>
+                <span class="color-family-count">6 styles</span>
               </div>
-              <p class="section-desc" style="margin-top:-8px">Body text uses Regular (400) by default with Medium (500) for emphasis. Generous line-heights ensure readability.</p>
+              <p class="section-desc" style="margin-top:-8px">Body text uses Regular (400) by default, Medium (500) for emphasis. Generous line-heights (1.5–1.65) ensure optimal readability across screens.</p>
             </div>
 
-            ${specimen('When you create a lot of things, you need a flexible toolkit that works across every medium.', 'font-size:21px;font-weight:400;line-height:1.29', ['Body XL', '21px', 'Weight 400', 'Line 1.29'], 'Introduction text, lead paragraphs')}
-            ${specimen('When you create a lot of things, you need a flexible toolkit that works across every medium and every context.', 'font-size:18px;font-weight:400;line-height:1.39;letter-spacing:0.01em', ['Body L', '18px', 'Weight 400', 'Line 1.39'], 'Main paragraphs')}
-            ${specimen('When you create a lot of things, you need a flexible toolkit that works across every medium and every context. Our type system handles it all.', 'font-size:16px;font-weight:400;line-height:1.5', ['Body M', '16px', 'Weight 400', 'Line 1.5'], 'Standard running text')}
-            ${specimen('Secondary descriptions, labels, navigation items, and supporting content that complements the main body text.', 'font-size:14px;font-weight:400;line-height:1.43', ['Body S', '14px', 'Weight 400', 'Line 1.43'], 'Secondary text, descriptions')}
-            ${specimen('Captions, legal mentions, footnotes, and other supplementary information displayed at the smallest readable size.', 'font-size:12px;font-weight:400;line-height:1.33', ['Body XS', '12px', 'Weight 400', 'Line 1.33'], 'Captions, footnotes, legal')}
+            ${specimen('Dfns empowers fintechs and financial institutions to leverage blockchain technology safely, effortlessly and at scale.', 'font-size:20px;font-weight:400;line-height:1.5;letter-spacing:-0.01em', ['Body XL', '20px', 'Regular 400', 'Line 1.5', 'LS −1%'], 'Hero subheadings, lead paragraphs, intro text')}
+            ${specimen('Dfns empowers fintechs and financial institutions to leverage blockchain technology safely, effortlessly and at scale. We handle the infrastructure so you can focus on building.', 'font-size:18px;font-weight:400;line-height:1.55', ['Body L', '18px', 'Regular 400', 'Line 1.55'], 'Article body, long-form descriptions, feature explanations')}
+            ${specimen('Dfns empowers fintechs and financial institutions to leverage blockchain technology safely, effortlessly and at scale. We handle the infrastructure so you can focus on building great products.', 'font-size:16px;font-weight:400;line-height:1.6', ['Body M', '16px', 'Regular 400', 'Line 1.6'], 'Default UI text, standard running copy, dashboard descriptions')}
+            ${specimen('Secondary descriptions, sidebar content, navigation items, tooltips, and supporting content that complements the main body text across all surfaces.', 'font-size:14px;font-weight:400;line-height:1.57', ['Body S', '14px', 'Regular 400', 'Line 1.57'], 'Secondary text, sidebar copy, tooltips, helper text')}
+            ${specimen('Supplementary content, table cell text, list item details, and contextual information that supports primary content without competing for attention.', 'font-size:13px;font-weight:400;line-height:1.54', ['Body XS', '13px', 'Regular 400', 'Line 1.54'], 'Table cells, list items, contextual detail')}
+            ${specimen('Captions, legal mentions, footnotes, and other supplementary information displayed at the smallest readable size across all product surfaces.', 'font-size:12px;font-weight:400;line-height:1.5', ['Caption', '12px', 'Regular 400', 'Line 1.5'], 'Image captions, footnotes, legal mentions')}
 
             <div class="color-family" style="margin-top:40px">
               <div class="color-family-header">
@@ -2968,27 +2979,56 @@
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Do</strong> — Use Body M (16px) as the default for all running text. Go larger for introductions, smaller for secondary content.</span>
+                <span><strong>Do</strong> — Use Body M (16px) as the universal default across dashboard, product and website contexts.</span>
+              </div>
+              <div class="color-tip" style="margin-bottom:10px">
+                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Do</strong> — Switch to Body S (14px) for dense UIs like data tables, sidebars and settings panels.</span>
               </div>
               <div class="color-tip">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span><strong>Don't</strong> — Don't go below 12px (Body XS) for any text that users need to read. Use it sparingly for legal and footnotes only.</span>
+                <span><strong>Don't</strong> — Don't go below 12px (Caption) for any readable text. Reserve it strictly for legal, footnotes and timestamps.</span>
               </div>
             </div>
           </div>
 
-          <!-- UI Styles -->
+          <!-- UI & Labels -->
           <div class="color-tab-panel" id="ttab-ui">
             <div class="color-family">
               <div class="color-family-header">
-                <span class="color-family-name">UI Typography</span>
-                <span class="color-family-count">2 styles</span>
+                <span class="color-family-name">Buttons</span>
+                <span class="color-family-count">3 sizes</span>
               </div>
-              <p class="section-desc" style="margin-top:-8px">Specialized styles for interactive elements. Both use Semibold (600) and uppercase for maximum scannability.</p>
+              <p class="section-desc" style="margin-top:-8px">Buttons use Medium (500) weight — not uppercase. Clear, direct, action-oriented.</p>
             </div>
 
-            ${specimen('CALL TO ACTION', 'font-size:14px;font-weight:600;line-height:1.29;text-transform:uppercase;letter-spacing:0.05em', ['Button', '14px', 'Weight 600', 'Uppercase', 'Line 1.29'], 'Buttons, CTAs, primary actions')}
-            ${specimen('FORM LABEL', 'font-size:14px;font-weight:600;line-height:2.29;text-transform:uppercase;letter-spacing:0.05em', ['Label', '14px', 'Weight 600', 'Uppercase', 'Line 2.29'], 'Form labels, tags, category headers')}
+            ${specimen('Get a demo', 'font-size:16px;font-weight:500;line-height:1.25;letter-spacing:-0.005em', ['Button L', '16px', 'Medium 500', 'Line 1.25'], 'Primary CTA, hero actions, full-width buttons')}
+            ${specimen('Get a demo', 'font-size:14px;font-weight:500;line-height:1.28;letter-spacing:-0.005em', ['Button M', '14px', 'Medium 500', 'Line 1.28'], 'Standard buttons, form submit, nav CTAs')}
+            ${specimen('Get a demo', 'font-size:12px;font-weight:500;line-height:1.33', ['Button S', '12px', 'Medium 500', 'Line 1.33'], 'Compact buttons, table actions, inline CTAs')}
+
+            <div class="color-family" style="margin-top:40px">
+              <div class="color-family-header">
+                <span class="color-family-name">Labels & Tags</span>
+                <span class="color-family-count">4 styles</span>
+              </div>
+              <p class="section-desc" style="margin-top:-8px">Labels identify and categorize content. They pair with badges, chips, status indicators and form fields.</p>
+            </div>
+
+            ${specimen('Form Field Label', 'font-size:14px;font-weight:500;line-height:1.4;letter-spacing:0.005em', ['Label L', '14px', 'Medium 500', 'Line 1.4', 'LS +0.5%'], 'Form labels, settings rows, filter headers')}
+            ${specimen('Status tag', 'font-size:12px;font-weight:500;line-height:1.33;letter-spacing:0.005em', ['Label M', '12px', 'Medium 500', 'Line 1.33', 'LS +0.5%'], 'Chips, badges, status tags, table labels')}
+            ${specimen('SECTION LABEL', 'font-size:11px;font-weight:600;line-height:1.4;letter-spacing:0.08em;text-transform:uppercase', ['Overline', '11px', 'Semibold 600', 'Uppercase', 'LS +8%'], 'Section markers, nav group headers, category overlines')}
+            ${specimen('NEW · ACTIVE · v2.4.1', 'font-size:10px;font-weight:600;line-height:1.4;letter-spacing:0.06em;text-transform:uppercase', ['Badge', '10px', 'Semibold 600', 'Uppercase', 'LS +6%'], 'Version tags, status badges, notification counts')}
+
+            <div class="color-family" style="margin-top:40px">
+              <div class="color-family-header">
+                <span class="color-family-name">Navigation & Tabs</span>
+                <span class="color-family-count">2 styles</span>
+              </div>
+              <p class="section-desc" style="margin-top:-8px">Navigation text is compact and scannable — Medium weight, no uppercase.</p>
+            </div>
+
+            ${specimen('Dashboard · Wallets · Transactions · Settings', 'font-size:14px;font-weight:500;line-height:1;letter-spacing:-0.003em', ['Nav Item', '14px', 'Medium 500', 'Line 1'], 'Top nav, sidebar nav, breadcrumbs')}
+            ${specimen('Overview · Analytics · Activity · Team', 'font-size:13px;font-weight:500;line-height:1;letter-spacing:-0.002em', ['Tab', '13px', 'Medium 500', 'Line 1'], 'Tab bars, sub-navigation, segmented controls')}
 
             <div class="color-family" style="margin-top:40px">
               <div class="color-family-header">
@@ -2996,11 +3036,97 @@
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Do</strong> — Always use uppercase + Semibold for buttons and labels. This is a core brand pattern.</span>
+                <span><strong>Do</strong> — Use Overline (uppercase, +8%) to introduce sections. It creates clear visual anchoring without competing with headings.</span>
               </div>
               <div class="color-tip">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span><strong>Don't</strong> — Don't use uppercase styling for body text or headings. Reserve it strictly for UI elements.</span>
+                <span><strong>Don't</strong> — Don't use uppercase for button text. Dfns buttons are sentence-case — professional, not aggressive.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data & Stats -->
+          <div class="color-tab-panel" id="ttab-data">
+            <div class="color-family">
+              <div class="color-family-header">
+                <span class="color-family-name">Dashboard Metrics</span>
+                <span class="color-family-count">3 sizes</span>
+              </div>
+              <p class="section-desc" style="margin-top:-8px">Large numeric displays for KPIs, stats cards, and data visualisations. Medium (500) weight for legibility at scale.</p>
+            </div>
+
+            ${specimen('$2.4B', 'font-size:56px;font-weight:500;line-height:1.05;letter-spacing:-0.02em', ['Stat XL', '56px', 'Medium 500', 'Line 1.05', 'LS −2%'], 'Hero KPI, primary dashboard metric, full-width stat card')}
+            ${specimen('12,403', 'font-size:40px;font-weight:500;line-height:1.1;letter-spacing:-0.015em', ['Stat L', '40px', 'Medium 500', 'Line 1.1', 'LS −1.5%'], 'Secondary KPI, widget stat, chart annotation')}
+            ${specimen('99.98%', 'font-size:28px;font-weight:500;line-height:1.2;letter-spacing:-0.01em', ['Stat M', '28px', 'Medium 500', 'Line 1.2', 'LS −1%'], 'Compact stats, list metrics, table summary values')}
+
+            <div class="color-family" style="margin-top:40px">
+              <div class="color-family-header">
+                <span class="color-family-name">Data Text</span>
+                <span class="color-family-count">3 styles</span>
+              </div>
+              <p class="section-desc" style="margin-top:-8px">Tabular and transactional data. Optimised for scannability in dense data environments.</p>
+            </div>
+
+            ${specimen('0x3fA2…c8E1 · 0.004823 ETH · 2026-02-28', 'font-size:14px;font-weight:400;line-height:1.5;font-variant-numeric:tabular-nums', ['Data M', '14px', 'Regular 400', 'Tabular nums'], 'Wallet addresses, transaction amounts, timestamps — table rows')}
+            ${specimen('0x3fA2e4B7d91c2F5a8e3C6b0D4F2A1E9B7c8E1d2 · Confirmed · +240%', 'font-size:13px;font-weight:400;line-height:1.5;font-variant-numeric:tabular-nums', ['Data S', '13px', 'Regular 400', 'Tabular nums'], 'Full addresses, compact table cells, activity feeds')}
+            ${specimen('+12.4% · −0.003 ETH · 1,204 txns', 'font-size:12px;font-weight:500;line-height:1.4;font-variant-numeric:tabular-nums', ['Data XS', '12px', 'Medium 500', 'Tabular nums'], 'Delta values, percentage changes, secondary metrics')}
+
+            <div class="color-family" style="margin-top:40px">
+              <div class="color-family-header">
+                <span class="color-family-name">Usage</span>
+              </div>
+              <div class="color-tip" style="margin-bottom:10px">
+                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Do</strong> — Always use <code class="code-inline">font-variant-numeric: tabular-nums</code> for numerical data so columns align perfectly.</span>
+              </div>
+              <div class="color-tip" style="margin-bottom:10px">
+                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Do</strong> — Color delta values: <code class="code-inline">#22C55E</code> for positive, <code class="code-inline">#EF4444</code> for negative changes.</span>
+              </div>
+              <div class="color-tip">
+                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span><strong>Don't</strong> — Don't truncate crypto addresses mid-character. Use ellipsis at position 6…4 (e.g., 0x3fA2…c8E1).</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code & Mono -->
+          <div class="color-tab-panel" id="ttab-code">
+            <div class="color-family">
+              <div class="color-family-header">
+                <span class="color-family-name">Code & Monospace</span>
+                <span class="color-family-count">4 styles</span>
+              </div>
+              <p class="section-desc" style="margin-top:-8px">Monospace styles for code, technical identifiers, and developer-facing content. Use system mono stack for optimal rendering.</p>
+            </div>
+
+            ${specimen('<span style="font-family:\'SF Mono\',ui-monospace,\'Cascadia Code\',\'Fira Code\',monospace">const wallet = await dfns.wallets.create({ network: \'EthereumGoerli\' })</span>', 'font-size:14px;font-weight:400;line-height:1.65', ['Code Block', '14px', 'Mono 400', 'Line 1.65'], 'Code blocks, API examples, SDK documentation')}
+            ${specimen('<span style="font-family:\'SF Mono\',ui-monospace,\'Cascadia Code\',\'Fira Code\',monospace">dfns.wallets.create()</span>', 'font-size:14px;font-weight:400;line-height:1.5', ['Code Inline', '14px', 'Mono 400', 'Line 1.5'], 'Inline code references, method names, parameter keys')}
+            ${specimen('<span style="font-family:\'SF Mono\',ui-monospace,\'Cascadia Code\',\'Fira Code\',monospace">0x3fA2e4B7d91c2F5a8e3C6b0D4F2A1E9B7c8E1d2</span>', 'font-size:13px;font-weight:400;line-height:1.5', ['Address', '13px', 'Mono 400', 'Line 1.5'], 'Wallet addresses, transaction hashes, API keys')}
+            ${specimen('<span style="font-family:\'SF Mono\',ui-monospace,\'Cascadia Code\',\'Fira Code\',monospace">HTTP 200 · application/json · 142ms</span>', 'font-size:12px;font-weight:400;line-height:1.5', ['Terminal', '12px', 'Mono 400', 'Line 1.5'], 'API response metadata, terminal output, status codes')}
+
+            <div class="color-family" style="margin-top:40px">
+              <div class="color-family-header">
+                <span class="color-family-name">Font Stack</span>
+              </div>
+              <p class="section-desc" style="margin-top:-8px;font-family:'SF Mono',ui-monospace,monospace;font-size:13px">'SF Mono', ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', monospace</p>
+            </div>
+
+            <div class="color-family" style="margin-top:24px">
+              <div class="color-family-header">
+                <span class="color-family-name">Usage</span>
+              </div>
+              <div class="color-tip" style="margin-bottom:10px">
+                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Do</strong> — Use monospace for any cryptographic string: addresses, hashes, API keys, and transaction IDs.</span>
+              </div>
+              <div class="color-tip" style="margin-bottom:10px">
+                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Do</strong> — Apply a subtle background (<code class="code-inline">--code-bg</code>) to inline code to visually separate it from prose.</span>
+              </div>
+              <div class="color-tip">
+                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span><strong>Don't</strong> — Don't use Suisse Intl for code. The proportional spacing breaks alignment in technical contexts.</span>
               </div>
             </div>
           </div>
