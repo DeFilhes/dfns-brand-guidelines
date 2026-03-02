@@ -96,11 +96,11 @@
       --code-bg: rgba(255,255,255,0.08);
 
       /* Dual-tone headings (dark mode) — H1 & H2
-         emphasis = Book 350 → blanc pur
-         light    = Light 300 → Purple 300 (accent dark) */
-      --h1-emphasis: #FFFFFF;
+         light    = Light 300 → Purple 300 #AA8BFF  — 1ère ligne
+         emphasis = Book 350 → Cold Grey Light #E0E3F0 — 2ème ligne */
+      --h1-emphasis: #E0E3F0;
       --h1-light: #AA8BFF;
-      --h2-emphasis: #FFFFFF;
+      --h2-emphasis: #E0E3F0;
       --h2-light: #AA8BFF;
 
       --accent-light: var(--purple-300);
@@ -2044,8 +2044,8 @@
       <!-- Quote — dual-tone H2 brand statement -->
       <div class="home-quote-section">
         <h2 class="h2-dual" style="margin-bottom:24px">
-          <span class="emphasis">One Operating Infrastructure</span><br>
-          <span class="light">to Do Everything Onchain</span>
+          <span class="light">One Operating Infrastructure</span><br>
+          <span class="emphasis">to Do Everything Onchain</span>
         </h2>
         <p class="home-quote-author">Dfns — Brand Statement</p>
       </div>
@@ -2982,17 +2982,17 @@
                 <div style="padding:28px 24px;background:#170C33;border-right:1px solid rgba(255,255,255,0.06)">
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:18px">Dark mode</div>
                   <div style="font-family:var(--font);font-size:clamp(22px,2.5vw,38px);line-height:1.1;letter-spacing:-0.0196em;margin-bottom:20px">
-                    <span style="font-weight:350;color:#FFFFFF;display:block">One Operating</span>
-                    <span style="font-weight:300;color:#AA8BFF;display:block">Infrastructure</span>
+                    <span style="font-weight:300;color:#AA8BFF;display:block">One Operating</span>
+                    <span style="font-weight:350;color:#E0E3F0;display:block">Infrastructure</span>
                   </div>
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
-                      <span style="width:10px;height:10px;border-radius:2px;background:#FFFFFF;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#FFFFFF</code><span>— Book 350</span>
-                    </div>
-                    <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                       <span style="width:10px;height:10px;border-radius:2px;background:#AA8BFF;flex-shrink:0;display:inline-block"></span>
                       <code style="font-family:'SF Mono',monospace">#AA8BFF</code><span>— Light 300 · Purple 300</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
+                      <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
+                      <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Book 350 · Cold Grey Light</span>
                     </div>
                   </div>
                 </div>
@@ -3000,17 +3000,17 @@
                 <div style="padding:28px 24px;background:#F0F1F4">
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(30,32,46,0.35);margin-bottom:18px">Light mode</div>
                   <div style="font-family:var(--font);font-size:clamp(22px,2.5vw,38px);line-height:1.1;letter-spacing:-0.0196em;margin-bottom:20px">
-                    <span style="font-weight:350;color:#363A5B;display:block">One Operating</span>
-                    <span style="font-weight:300;color:#442599;display:block">Infrastructure</span>
+                    <span style="font-weight:300;color:#442599;display:block">One Operating</span>
+                    <span style="font-weight:350;color:#363A5B;display:block">Infrastructure</span>
                   </div>
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
-                      <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Book 350 · Cold Grey Deep</span>
-                    </div>
-                    <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                       <span style="width:10px;height:10px;border-radius:2px;background:#442599;flex-shrink:0;display:inline-block"></span>
                       <code style="font-family:'SF Mono',monospace">#442599</code><span>— Light 300 · Purple 700</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
+                      <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
+                      <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Book 350 · Cold Grey Deep</span>
                     </div>
                   </div>
                 </div>
@@ -3032,17 +3032,17 @@
                 <div style="padding:28px 24px;background:#170C33;border-right:1px solid rgba(255,255,255,0.06)">
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:18px">Dark mode</div>
                   <div style="font-family:var(--font);font-size:clamp(18px,2vw,30px);line-height:1.1;letter-spacing:-0.0245em;margin-bottom:20px">
-                    <span style="font-weight:350;color:#FFFFFF;display:block">One Operating Infrastructure</span>
-                    <span style="font-weight:300;color:#AA8BFF;display:block">to Do Everything Onchain</span>
+                    <span style="font-weight:300;color:#AA8BFF;display:block">One Operating Infrastructure</span>
+                    <span style="font-weight:350;color:#E0E3F0;display:block">to Do Everything Onchain</span>
                   </div>
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
-                      <span style="width:10px;height:10px;border-radius:2px;background:#FFFFFF;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#FFFFFF</code><span>— Book 350</span>
-                    </div>
-                    <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                       <span style="width:10px;height:10px;border-radius:2px;background:#AA8BFF;flex-shrink:0;display:inline-block"></span>
                       <code style="font-family:'SF Mono',monospace">#AA8BFF</code><span>— Light 300 · Purple 300</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
+                      <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
+                      <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Book 350 · Cold Grey Light</span>
                     </div>
                   </div>
                 </div>
@@ -3050,17 +3050,17 @@
                 <div style="padding:28px 24px;background:#F0F1F4">
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(30,32,46,0.35);margin-bottom:18px">Light mode</div>
                   <div style="font-family:var(--font);font-size:clamp(18px,2vw,30px);line-height:1.1;letter-spacing:-0.0245em;margin-bottom:20px">
-                    <span style="font-weight:350;color:#363A5B;display:block">One Operating Infrastructure</span>
-                    <span style="font-weight:300;color:#442599;display:block">to Do Everything Onchain</span>
+                    <span style="font-weight:300;color:#442599;display:block">One Operating Infrastructure</span>
+                    <span style="font-weight:350;color:#363A5B;display:block">to Do Everything Onchain</span>
                   </div>
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
-                      <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Book 350 · Cold Grey Deep</span>
-                    </div>
-                    <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                       <span style="width:10px;height:10px;border-radius:2px;background:#442599;flex-shrink:0;display:inline-block"></span>
                       <code style="font-family:'SF Mono',monospace">#442599</code><span>— Light 300 · Purple 700</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
+                      <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
+                      <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Book 350 · Cold Grey Deep</span>
                     </div>
                   </div>
                 </div>
@@ -3080,11 +3080,19 @@
               <div style="display:grid;grid-template-columns:1fr 1fr">
                 <div style="padding:24px;background:#170C33;border-right:1px solid rgba(255,255,255,0.06)">
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px">Dark mode</div>
-                  <div style="font-family:var(--font);font-size:clamp(16px,1.8vw,26px);font-weight:300;line-height:1.15;letter-spacing:-0.03em;color:#FFFFFF">One Operating Infrastructure to Do Everything Onchain</div>
+                  <div style="font-family:var(--font);font-size:clamp(16px,1.8vw,26px);font-weight:300;line-height:1.15;letter-spacing:-0.03em;color:#E0E3F0;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain</div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
+                    <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
+                    <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Light 300 · Cold Grey Light</span>
+                  </div>
                 </div>
                 <div style="padding:24px;background:#F0F1F4">
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(30,32,46,0.35);margin-bottom:14px">Light mode</div>
-                  <div style="font-family:var(--font);font-size:clamp(16px,1.8vw,26px);font-weight:300;line-height:1.15;letter-spacing:-0.03em;color:#1E202E">One Operating Infrastructure to Do Everything Onchain</div>
+                  <div style="font-family:var(--font);font-size:clamp(16px,1.8vw,26px);font-weight:300;line-height:1.15;letter-spacing:-0.03em;color:#363A5B;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain</div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
+                    <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
+                    <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Light 300 · Cold Grey Deep</span>
+                  </div>
                 </div>
               </div>
               <div style="padding:10px 20px;background:var(--bg-surface);border-top:1px solid var(--border-subtle);font-size:12px;color:var(--text-muted)">Sub-section titles, card headers, modal titles</div>
@@ -3102,11 +3110,19 @@
               <div style="display:grid;grid-template-columns:1fr 1fr">
                 <div style="padding:24px;background:#170C33;border-right:1px solid rgba(255,255,255,0.06)">
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px">Dark mode</div>
-                  <div style="font-family:var(--font);font-size:clamp(14px,1.4vw,20px);font-weight:300;line-height:1.1;letter-spacing:-0.0445em;color:#FFFFFF">One Operating Infrastructure to Do Everything Onchain across your stack</div>
+                  <div style="font-family:var(--font);font-size:clamp(14px,1.4vw,20px);font-weight:300;line-height:1.1;letter-spacing:-0.0445em;color:#E0E3F0;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain across your stack</div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
+                    <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
+                    <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Light 300 · Cold Grey Light</span>
+                  </div>
                 </div>
                 <div style="padding:24px;background:#F0F1F4">
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(30,32,46,0.35);margin-bottom:14px">Light mode</div>
-                  <div style="font-family:var(--font);font-size:clamp(14px,1.4vw,20px);font-weight:300;line-height:1.1;letter-spacing:-0.0445em;color:#1E202E">One Operating Infrastructure to Do Everything Onchain across your stack</div>
+                  <div style="font-family:var(--font);font-size:clamp(14px,1.4vw,20px);font-weight:300;line-height:1.1;letter-spacing:-0.0445em;color:#363A5B;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain across your stack</div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
+                    <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
+                    <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Light 300 · Cold Grey Deep</span>
+                  </div>
                 </div>
               </div>
               <div style="padding:10px 20px;background:var(--bg-surface);border-top:1px solid var(--border-subtle);font-size:12px;color:var(--text-muted)">Widget titles, sidebar headers, list group labels</div>
@@ -3124,11 +3140,19 @@
               <div style="display:grid;grid-template-columns:1fr 1fr">
                 <div style="padding:24px;background:#170C33;border-right:1px solid rgba(255,255,255,0.06)">
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px">Dark mode</div>
-                  <div style="font-family:var(--font);font-size:14px;font-weight:300;line-height:1.2;letter-spacing:-0.02em;color:#FFFFFF">One Operating Infrastructure to Do Everything Onchain across your entire stack</div>
+                  <div style="font-family:var(--font);font-size:14px;font-weight:300;line-height:1.2;letter-spacing:-0.02em;color:#E0E3F0;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain across your entire stack</div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
+                    <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
+                    <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Light 300 · Cold Grey Light</span>
+                  </div>
                 </div>
                 <div style="padding:24px;background:#F0F1F4">
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(30,32,46,0.35);margin-bottom:14px">Light mode</div>
-                  <div style="font-family:var(--font);font-size:14px;font-weight:300;line-height:1.2;letter-spacing:-0.02em;color:#1E202E">One Operating Infrastructure to Do Everything Onchain across your entire stack</div>
+                  <div style="font-family:var(--font);font-size:14px;font-weight:300;line-height:1.2;letter-spacing:-0.02em;color:#363A5B;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain across your entire stack</div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
+                    <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
+                    <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Light 300 · Cold Grey Deep</span>
+                  </div>
                 </div>
               </div>
               <div style="padding:10px 20px;background:var(--bg-surface);border-top:1px solid var(--border-subtle);font-size:12px;color:var(--text-muted)">Table headers, panel headings, compact section labels</div>
@@ -3138,16 +3162,16 @@
               <div class="color-family-header">
                 <span class="color-family-name">Code HTML</span>
               </div>
-              <pre style="background:var(--code-bg);border-radius:10px;padding:16px 20px;font-size:13px;font-family:'SF Mono',ui-monospace,monospace;line-height:1.7;overflow-x:auto;color:var(--text-primary)">&lt;!-- H1 dual-tone --&gt;
+              <pre style="background:var(--code-bg);border-radius:10px;padding:16px 20px;font-size:13px;font-family:'SF Mono',ui-monospace,monospace;line-height:1.7;overflow-x:auto;color:var(--text-primary)">&lt;!-- H1 dual-tone : light (Purple) en 1ère ligne, emphasis (Cold Grey) en 2ème --&gt;
 &lt;h1 class="h1-dual"&gt;
-  &lt;span class="emphasis"&gt;One Operating&lt;/span&gt;
-  &lt;span class="light"&gt;Infrastructure&lt;/span&gt;
+  &lt;span class="light"&gt;One Operating&lt;/span&gt;
+  &lt;span class="emphasis"&gt;Infrastructure&lt;/span&gt;
 &lt;/h1&gt;
 
 &lt;!-- H2 dual-tone --&gt;
 &lt;h2 class="h2-dual"&gt;
-  &lt;span class="emphasis"&gt;One Operating Infrastructure&lt;/span&gt;
-  &lt;span class="light"&gt;to Do Everything Onchain&lt;/span&gt;
+  &lt;span class="light"&gt;One Operating Infrastructure&lt;/span&gt;
+  &lt;span class="emphasis"&gt;to Do Everything Onchain&lt;/span&gt;
 &lt;/h2&gt;</pre>
             </div>
 
