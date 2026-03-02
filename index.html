@@ -95,9 +95,11 @@
 
       --code-bg: rgba(255,255,255,0.08);
 
-      /* H1 dual-tone (dark mode) */
+      /* Dual-tone headings (dark mode) — H1 & H2 */
       --h1-emphasis: #FFFFFF;
-      --h1-light: rgba(255,255,255,0.5);
+      --h1-light: rgba(255,255,255,0.38);
+      --h2-emphasis: rgba(255,255,255,0.9);
+      --h2-light: rgba(255,255,255,0.35);
 
       --accent-light: var(--purple-300);
       --accent-dark: var(--purple-700);
@@ -141,9 +143,11 @@
 
       --code-bg: #E8EAF0;
 
-      /* H1 dual-tone (light mode) */
-      --h1-emphasis: #363A5B;
-      --h1-light: #575C7B;
+      /* Dual-tone headings (light mode) — H1 & H2 */
+      --h1-emphasis: #1E202E;
+      --h1-light: #999BAF;
+      --h2-emphasis: #363A5B;
+      --h2-light: #999BAF;
 
       --accent: #442599;
       --accent-light: #442599;
@@ -528,20 +532,38 @@
       margin: 0 auto;
     }
 
-    /* H1 Dual-Tone — two weights, two colors */
+    /* ── Dual-Tone Headings — H1 & H2 ─────────────────────
+       Contrast rule: Book (350) emphasis / Light (300) secondary
+       Two weights + two colors on every dual-tone heading.
+    ──────────────────────────────────────────────────────── */
     .h1-dual {
       font-family: var(--font);
-      font-size: clamp(32px, 4vw, 42px);
-      line-height: 1.19;
-      letter-spacing: -0.0095em;
+      font-size: clamp(32px, 4.5vw, 50px);
+      line-height: 1.1;
+      letter-spacing: -0.0196em;
     }
     .h1-dual .emphasis {
-      font-weight: 350; /* Book — maps to Figma's 450 "Book" */
+      font-weight: 350;       /* Book — heavier half */
       color: var(--h1-emphasis);
     }
     .h1-dual .light {
-      font-weight: 400; /* Regular */
+      font-weight: 300;       /* Light — thinner half */
       color: var(--h1-light);
+    }
+
+    .h2-dual {
+      font-family: var(--font);
+      font-size: clamp(24px, 3.5vw, 40px);
+      line-height: 1.1;
+      letter-spacing: -0.0245em;
+    }
+    .h2-dual .emphasis {
+      font-weight: 350;       /* Book — heavier half */
+      color: var(--h2-emphasis);
+    }
+    .h2-dual .light {
+      font-weight: 300;       /* Light — thinner half */
+      color: var(--h2-light);
     }
 
     .home-quote-text {
@@ -2015,6 +2037,15 @@
         <!-- Tiles injected via JS -->
       </div>
 
+      <!-- Quote — dual-tone H2 brand statement -->
+      <div class="home-quote-section">
+        <h2 class="h2-dual" style="margin-bottom:24px">
+          <span class="emphasis">One Operating Infrastructure</span><br>
+          <span class="light">to Do Everything Onchain</span>
+        </h2>
+        <p class="home-quote-author">Dfns — Brand Statement</p>
+      </div>
+
       <!-- Resources -->
       <div class="home-resources">
         <a class="resource-pill" href="#">
@@ -2926,32 +2957,104 @@
               <p class="section-desc" style="margin-top:-8px">All headings use Suisse Int'l <strong>Light (300)</strong> with very tight letter-spacing — the defining editorial voice of Dfns. Source: Figma Master Material.</p>
             </div>
 
-            ${specimen('One Operating Infrastructure', 'font-size:96px;font-weight:500;line-height:1.1;letter-spacing:-0.02em', ['Display', '96px', 'Weight 500', 'Line 1.1', 'LS −2%'], 'Full-bleed hero, editorial covers, key brand moments')}
-            ${specimen('<span style="font-weight:300;color:var(--h1-emphasis)">One Operating</span> <span style="font-weight:300;color:var(--h1-light)">Infrastructure</span>', 'font-size:50px;line-height:1.1;letter-spacing:-0.0196em', ['H1', '50px', 'Light 300', 'Line 1.1', 'LS −1.96%'], 'Page hero, landing section title — dual-tone optional')}
-            ${specimen('One Operating Infrastructure to Do Everything', 'font-size:40px;font-weight:300;line-height:1.1;letter-spacing:-0.0245em', ['H2', '40px', 'Light 300', 'Line 1.1', 'LS −2.45%'], 'Section titles, feature headings, page sub-hero')}
+            ${specimen('One Operating Infrastructure', 'font-size:96px;font-weight:500;line-height:1.1;letter-spacing:-0.02em', ['Display', '96px', 'Medium 500', 'Line 1.1', 'LS −2%'], 'Full-bleed hero, editorial covers, key brand moments')}
+
+            <div class="color-family" style="margin-top:8px;margin-bottom:0">
+              <div class="color-family-header">
+                <span class="color-family-name">Dual-Tone — H1 & H2</span>
+              </div>
+              <p class="section-desc" style="margin-top:-8px">H1 et H2 utilisent systématiquement <strong>deux graisses + deux couleurs</strong> : Book (350) pour la partie forte, Light (300) pour la partie secondaire. Le contraste de poids ET de couleur crée la hiérarchie visuelle.</p>
+            </div>
+
+            <div class="type-specimen-block" style="padding:32px;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:16px;margin-bottom:12px">
+              <div style="margin-bottom:16px;display:flex;gap:8px;flex-wrap:wrap">
+                <span class="type-specimen-tag">H1</span>
+                <span class="type-specimen-tag">50px</span>
+                <span class="type-specimen-tag">Book 350 + Light 300</span>
+                <span class="type-specimen-tag">Line 1.1</span>
+                <span class="type-specimen-tag">LS −1.96%</span>
+              </div>
+              <div class="h1-dual" style="margin-bottom:12px">
+                <span class="emphasis">One Operating</span><br>
+                <span class="light">Infrastructure</span>
+              </div>
+              <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:16px;padding-top:16px;border-top:1px solid var(--border-subtle)">
+                <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-secondary)">
+                  <span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--h1-emphasis)"></span>
+                  <code class="code-inline">--h1-emphasis</code> · Book 350
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-secondary)">
+                  <span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--h1-light)"></span>
+                  <code class="code-inline">--h1-light</code> · Light 300
+                </div>
+              </div>
+            </div>
+
+            <div class="type-specimen-block" style="padding:32px;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:16px;margin-bottom:24px">
+              <div style="margin-bottom:16px;display:flex;gap:8px;flex-wrap:wrap">
+                <span class="type-specimen-tag">H2</span>
+                <span class="type-specimen-tag">40px</span>
+                <span class="type-specimen-tag">Book 350 + Light 300</span>
+                <span class="type-specimen-tag">Line 1.1</span>
+                <span class="type-specimen-tag">LS −2.45%</span>
+              </div>
+              <div class="h2-dual" style="margin-bottom:12px">
+                <span class="emphasis">One Operating Infrastructure</span><br>
+                <span class="light">to Do Everything Onchain</span>
+              </div>
+              <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:16px;padding-top:16px;border-top:1px solid var(--border-subtle)">
+                <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-secondary)">
+                  <span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--h2-emphasis)"></span>
+                  <code class="code-inline">--h2-emphasis</code> · Book 350
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-secondary)">
+                  <span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--h2-light)"></span>
+                  <code class="code-inline">--h2-light</code> · Light 300
+                </div>
+              </div>
+            </div>
+
+            ${specimen('<span style="font-weight:300;color:var(--h1-emphasis)">One Operating</span><br><span style="font-weight:300;color:var(--h1-light)">Infrastructure</span>', 'font-size:50px;line-height:1.1;letter-spacing:-0.0196em', ['H1 — mono', '50px', 'Light 300', 'Line 1.1', 'LS −1.96%'], 'Variante H1 sans dual-tone — une seule graisse, une seule couleur')}
             ${specimen('One Operating Infrastructure to Do Everything Onchain', 'font-size:30px;font-weight:300;line-height:1.15;letter-spacing:-0.03em', ['H3', '30px', 'Light 300', 'Line 1.15', 'LS −3%'], 'Sub-section titles, card headers, modal titles')}
             ${specimen('One Operating Infrastructure to Do Everything Onchain across your stack', 'font-size:22px;font-weight:300;line-height:1.1;letter-spacing:-0.0445em', ['H4', '22px', 'Light 300', 'Line 1.1', 'LS −4.45%'], 'Widget titles, sidebar headers, list group labels')}
             ${specimen('One Operating Infrastructure to Do Everything Onchain across your entire stack', 'font-size:16px;font-weight:300;line-height:1.2;letter-spacing:-0.02em', ['H5', '16px', 'Light 300', 'Line 1.2', 'LS −2%'], 'Table headers, panel headings, compact section labels')}
 
             <div class="color-family" style="margin-top:40px">
               <div class="color-family-header">
+                <span class="color-family-name">Code HTML</span>
+              </div>
+              <pre style="background:var(--code-bg);border-radius:10px;padding:16px 20px;font-size:13px;font-family:'SF Mono',ui-monospace,monospace;line-height:1.7;overflow-x:auto;color:var(--text-primary)">&lt;!-- H1 dual-tone --&gt;
+&lt;h1 class="h1-dual"&gt;
+  &lt;span class="emphasis"&gt;One Operating&lt;/span&gt;
+  &lt;span class="light"&gt;Infrastructure&lt;/span&gt;
+&lt;/h1&gt;
+
+&lt;!-- H2 dual-tone --&gt;
+&lt;h2 class="h2-dual"&gt;
+  &lt;span class="emphasis"&gt;One Operating Infrastructure&lt;/span&gt;
+  &lt;span class="light"&gt;to Do Everything Onchain&lt;/span&gt;
+&lt;/h2&gt;</pre>
+            </div>
+
+            <div class="color-family" style="margin-top:32px">
+              <div class="color-family-header">
                 <span class="color-family-name">Usage</span>
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Do</strong> — Use Light (300) exclusively for all headings. The contrast between Light headings and Regular body is the core of the typographic system.</span>
+                <span><strong>Do</strong> — Toujours appliquer le dual-tone sur H1 et H2. C'est la signature typographique Dfns : <strong>Book (350) pour le concept clé</strong>, Light (300) pour la suite.</span>
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Do</strong> — Maintain the negative letter-spacing. It tightens at smaller sizes (H4: −4.45%) to preserve optical density.</span>
+                <span><strong>Do</strong> — Conserver la negative letter-spacing. Elle se resserre aux petites tailles (H4 : −4.45%) pour maintenir la densité optique.</span>
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Do</strong> — Apply dual-tone on H1 hero headlines: primary words in <code class="code-inline">--h1-emphasis</code>, secondary in <code class="code-inline">--h1-light</code>.</span>
+                <span><strong>Do</strong> — Utiliser H3–H5 en Light (300) mono-couleur. Le dual-tone est réservé aux niveaux H1 et H2.</span>
               </div>
               <div class="color-tip">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span><strong>Don't</strong> — Never use Medium (500) or Semibold (600) for headings. Reserve heavier weights for Display and UI elements only.</span>
+                <span><strong>Don't</strong> — Ne jamais utiliser Medium (500) ou Semibold (600) pour les headings. Ces graisses sont réservées au Display et aux éléments UI.</span>
               </div>
             </div>
           </div>
