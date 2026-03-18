@@ -96,8 +96,8 @@
       --code-bg: rgba(255,255,255,0.08);
 
       /* Dual-tone headings (dark mode) — H1 & H2
-         light    = Light 300 → Purple 300 #AA8BFF  — 1ère ligne
-         emphasis = Book 350 → Cold Grey Light #E0E3F0 — 2ème ligne */
+         light    = Light 300 → Ultra Purple 300 #AA8BFF  — 1ère ligne
+         emphasis = Book 350 → Cold Grey 100 #E0E3F0 — 2ème ligne */
       --h1-emphasis: #E0E3F0;
       --h1-light: #AA8BFF;
       --h2-emphasis: #E0E3F0;
@@ -146,8 +146,8 @@
       --code-bg: #E8EAF0;
 
       /* Dual-tone headings (light mode) — H1 & H2
-         emphasis = Book 350 → Cold Grey Deep
-         light    = Light 300 → Purple 700 (accent light) */
+         emphasis = Book 350 → Cold Grey 700
+         light    = Light 300 → Ultra Purple 700 (accent light) */
       --h1-emphasis: #363A5B;
       --h1-light: #442599;
       --h2-emphasis: #363A5B;
@@ -2415,7 +2415,7 @@
         customContent: true,
         customLayout: true,
         sections: [
-          { id: 'dfns-purple', title: 'Dfns Purple' },
+          { id: 'ultra-purple', title: 'Ultra Purple' },
           { id: 'cold-grey', title: 'Cold Grey' },
           { id: 'steel-grey', title: 'Steel Grey' }
         ]
@@ -2496,25 +2496,25 @@
 
     // ===== Color Data (from Figma) =====
     const colorData = {
-      dfnsPurple: [
-        { name: 'Purple 900', hex: '#170C33', textLight: true },
-        { name: 'Purple 800', hex: '#2D1866', textLight: true },
-        { name: 'Purple 700', hex: '#442599', textLight: true },
-        { name: 'Purple 300', hex: '#AA8BFF', textLight: false },
-        { name: 'Purple 50', hex: '#E6DEFF', textLight: false },
-        { name: 'Purple 100', hex: '#D6C8FF', textLight: false },
-        { name: 'Purple 200', hex: '#C4AEFF', textLight: false },
-        { name: 'Purple 400', hex: '#8860F7', textLight: true },
-        { name: 'Purple 500', hex: '#693AEA', textLight: true },
-        { name: 'Purple 600', hex: '#5123CE', textLight: true },
+      ultraPurple: [
+        { name: 'Ultra Purple 900', hex: '#170C33', textLight: true },
+        { name: 'Ultra Purple 800', hex: '#2D1866', textLight: true },
+        { name: 'Ultra Purple 700', hex: '#442599', textLight: true },
+        { name: 'Ultra Purple 300', hex: '#AA8BFF', textLight: false },
+        { name: 'Ultra Purple 50', hex: '#E6DEFF', textLight: false },
+        { name: 'Ultra Purple 100', hex: '#D6C8FF', textLight: false },
+        { name: 'Ultra Purple 200', hex: '#C4AEFF', textLight: false },
+        { name: 'Ultra Purple 400', hex: '#8860F7', textLight: true },
+        { name: 'Ultra Purple 500', hex: '#693AEA', textLight: true },
+        { name: 'Ultra Purple 600', hex: '#5123CE', textLight: true },
       ],
       coldGrey: [
-        { name: 'Light Cold Grey', hex: '#E0E3F0', textLight: false },
-        { name: 'Soft Cold Grey', hex: '#C5C9DE', textLight: false },
-        { name: 'Muted Cold Grey', hex: '#AEB1C9', textLight: false },
-        { name: 'Dark Cold Grey', hex: '#575C7B', textLight: true },
-        { name: 'Deep Cold Grey', hex: '#363A5B', textLight: true },
-        { name: 'Darkest Cold Grey', hex: '#1E202E', textLight: true },
+        { name: 'Cold Grey 100', hex: '#E0E3F0', textLight: false },
+        { name: 'Cold Grey 300', hex: '#C5C9DE', textLight: false },
+        { name: 'Cold Grey 500', hex: '#AEB1C9', textLight: false },
+        { name: 'Cold Grey 600', hex: '#575C7B', textLight: true },
+        { name: 'Cold Grey 700', hex: '#363A5B', textLight: true },
+        { name: 'Cold Grey 900', hex: '#1E202E', textLight: true },
       ],
       steelGrey: [
         { name: 'Steel Grey White', hex: '#FFFFFF', textLight: false },
@@ -2523,6 +2523,58 @@
         { name: 'Steel Grey 300', hex: '#E3E4EB', textLight: false },
         { name: 'Steel Grey 400', hex: '#D7D8E1', textLight: false },
         { name: 'Steel Grey 500', hex: '#CBCCD7', textLight: false },
+        { name: 'Steel Grey 600', hex: '#C4C5D3', textLight: false },
+      ],
+      darkPurple: [
+        { name: 'Dark Purple 100', hex: '#594A7D', textLight: true },
+        { name: 'Dark Purple 300', hex: '#443371', textLight: true },
+        { name: 'Dark Purple 500', hex: '#2E1767', textLight: true },
+        { name: 'Dark Purple 600', hex: '#231152', textLight: true },
+        { name: 'Dark Purple 700', hex: '#1D0E42', textLight: true },
+        { name: 'Dark Purple 900', hex: '#170C33', textLight: true },
+        { name: 'Dark Purple Black', hex: '#000000', textLight: true },
+      ],
+      systemColors: [
+        { name: 'Red 100', hex: '#FFEEF6', textLight: false },
+        { name: 'Red 500', hex: '#F85370', textLight: true },
+        { name: 'Red 900', hex: '#961B2C', textLight: true },
+        { name: 'Green 100', hex: '#D8FDDF', textLight: false },
+        { name: 'Green 500', hex: '#5CEB74', textLight: false },
+        { name: 'Green 900', hex: '#056F15', textLight: true },
+        { name: 'Blue 100', hex: '#CCD5FF', textLight: false },
+        { name: 'Blue 500', hex: '#4B6CFF', textLight: true },
+        { name: 'Blue 900', hex: '#0021B2', textLight: true },
+        { name: 'Yellow 100', hex: '#FEF0C2', textLight: false },
+        { name: 'Yellow 500', hex: '#F49200', textLight: true },
+        { name: 'Yellow 900', hex: '#85390A', textLight: true },
+      ],
+      semanticLight: [
+        { name: 'Background / Base', hex: '#F0F1F4', textLight: false, note: 'Steel Grey 100' },
+        { name: 'Background / B&W', hex: '#FFFFFF', textLight: false, note: 'Steel Grey White' },
+        { name: 'Background / Elevation 1', hex: '#E8EAF0', textLight: false, note: 'Steel Grey 200' },
+        { name: 'Background / Elevation 2', hex: '#E3E4EB', textLight: false, note: 'Steel Grey 300' },
+        { name: 'Font / Body Base', hex: '#1E202E', textLight: false, note: 'Cold Grey 900' },
+        { name: 'Font / Body Mid', hex: '#363A5B', textLight: false, note: 'Cold Grey 700' },
+        { name: 'Font / Body Bright', hex: '#575C7B', textLight: false, note: 'Cold Grey 600' },
+        { name: 'Font / Heading Purple', hex: '#2D1866', textLight: false, note: 'Ultra Purple 800' },
+        { name: 'Primary', hex: '#2D1866', textLight: false, note: 'Ultra Purple 800' },
+        { name: 'Hover', hex: '#693AEA', textLight: true, note: 'Ultra Purple 500' },
+        { name: 'Icons / Primary', hex: '#693AEA', textLight: true, note: 'Ultra Purple 500' },
+        { name: 'Icons / Secondary', hex: '#442599', textLight: true, note: 'Ultra Purple 700' },
+      ],
+      semanticDark: [
+        { name: 'Background / Base', hex: '#170C33', textLight: true, note: 'Dark Purple 900' },
+        { name: 'Background / B&W', hex: '#170C33', textLight: true, note: 'Dark Purple 900' },
+        { name: 'Background / Elevation 1', hex: '#1D0E42', textLight: true, note: 'Dark Purple 700' },
+        { name: 'Background / Elevation 2', hex: '#231152', textLight: true, note: 'Dark Purple 600' },
+        { name: 'Font / Body Base', hex: '#E0E3F0', textLight: true, note: 'Cold Grey 100' },
+        { name: 'Font / Body Mid', hex: '#C5C9DE', textLight: true, note: 'Cold Grey 300' },
+        { name: 'Font / Body Bright', hex: '#AEB1C9', textLight: true, note: 'Cold Grey 500' },
+        { name: 'Font / Heading Purple', hex: '#E6DEFF', textLight: true, note: 'Ultra Purple 50' },
+        { name: 'Primary', hex: '#2D1866', textLight: true, note: 'Ultra Purple 800' },
+        { name: 'Hover', hex: '#693AEA', textLight: true, note: 'Ultra Purple 500' },
+        { name: 'Icons / Primary', hex: '#693AEA', textLight: true, note: 'Ultra Purple 500' },
+        { name: 'Icons / Secondary', hex: '#8860F7', textLight: true, note: 'Ultra Purple 400' },
       ]
     };
 
@@ -2967,19 +3019,19 @@
 
     function getColorPageHTML() {
       const purpleUsage = [
-        { do: true, text: 'Use Purple 900 <code class="code-inline">#170C33</code> exclusively for backgrounds. No other purple should be used as background.' },
-        { do: true, text: 'Use Purple 700 <code class="code-inline">#442599</code> for large titles and headings.' },
-        { do: true, text: 'Use Purple 800 <code class="code-inline">#2D1866</code> exclusively for interactive elements: call-to-action buttons, icons, and illustrations.' },
-        { do: true, text: 'Use Purple 300 <code class="code-inline">#AA8BFF</code> for titles in dark mode only.' },
-        { do: true, text: 'Use Purple 50–200 for subtle tinted backgrounds: selected rows, tag fills, notification badges, and hover states on light surfaces.' },
-        { do: true, text: 'Use Purple 400–600 for interactive states: hover/active/focus on buttons, links, and form elements.' },
-        { do: false, text: 'Don\'t use Purple 300 in light mode — it lacks contrast on light backgrounds.' },
-        { do: false, text: 'Don\'t use Purple 800 or 700 as backgrounds — only Purple 900 serves this purpose.' }
+        { do: true, text: 'Use Ultra Purple 900 <code class="code-inline">#170C33</code> exclusively for backgrounds. No other purple should be used as background.' },
+        { do: true, text: 'Use Ultra Purple 700 <code class="code-inline">#442599</code> for large titles and headings.' },
+        { do: true, text: 'Use Ultra Purple 800 <code class="code-inline">#2D1866</code> exclusively for interactive elements: call-to-action buttons, icons, and illustrations.' },
+        { do: true, text: 'Use Ultra Purple 300 <code class="code-inline">#AA8BFF</code> for titles in dark mode only.' },
+        { do: true, text: 'Use Ultra Purple 50–200 for subtle tinted backgrounds: selected rows, tag fills, notification badges, and hover states on light surfaces.' },
+        { do: true, text: 'Use Ultra Purple 400–600 for interactive states: hover/active/focus on buttons, links, and form elements.' },
+        { do: false, text: 'Don\'t use Ultra Purple 300 in light mode — it lacks contrast on light backgrounds.' },
+        { do: false, text: 'Don\'t use Ultra Purple 800 or 700 as backgrounds — only Ultra Purple 900 serves this purpose.' }
       ];
       const coldGreyUsage = [
-        { do: true, text: 'Use Light and Soft Cold Grey for borders, dividers, and subtle separators in light mode.' },
-        { do: true, text: 'Use Muted Cold Grey for placeholder text, disabled labels, and secondary captions.' },
-        { do: true, text: 'Use Cold Greys for text hierarchy and borders. Pair Light Cold Grey with deep purples for readable contrast.' },
+        { do: true, text: 'Use Cold Grey 100 and Cold Grey 300 for borders, dividers, and subtle separators in light mode.' },
+        { do: true, text: 'Use Cold Grey 500 for placeholder text, disabled labels, and secondary captions.' },
+        { do: true, text: 'Use Cold Greys for text hierarchy and borders. Pair Cold Grey 100 with deep purples for readable contrast.' },
         { do: false, text: 'Avoid using Cold Greys as primary backgrounds. They are designed for text and borders, not large surface areas.' }
       ];
       const steelGreyUsage = [
@@ -2987,6 +3039,17 @@
         { do: true, text: 'Use Steel Grey White <code class="code-inline">#FFFFFF</code> for card surfaces on grey backgrounds.' },
         { do: true, text: 'Use Steel Grey 400–500 for stronger borders, dividers, and tertiary text on white backgrounds.' },
         { do: false, text: 'Avoid Steel Greys for primary text — they lack sufficient contrast. Use Cold Greys or Purples for text.' }
+      ];
+
+      const darkPurpleUsage = [
+        { do: true, text: 'Use Dark Purple for dark mode surfaces and elevated backgrounds.' },
+        { do: true, text: 'Dark Purple 900 <code class="code-inline">#170C33</code> is the dark mode page background.' },
+        { do: false, text: 'Don\'t use Dark Purple in light mode — these are dark mode exclusive.' }
+      ];
+      const systemUsage = [
+        { do: true, text: 'Red for errors and destructive actions. Green for success confirmations. Blue for informational states. Yellow for warnings.' },
+        { do: true, text: 'Use the 100 level for backgrounds, 500 for primary indicators, 700–900 for text on light surfaces.' },
+        { do: false, text: 'Don\'t use system colors for decorative purposes — they carry semantic meaning.' }
       ];
 
       return `
@@ -2998,16 +3061,19 @@
             </a>
 
             <h1 class="content-title">Color</h1>
-            <p class="content-subtitle" style="border:none;padding-bottom:0;margin-bottom:0">Color palette, system colors, and accessibility guidelines.</p>
+            <p class="content-subtitle" style="border:none;padding-bottom:0;margin-bottom:0">Color palette, system colors, semantic variables, and accessibility guidelines. Aligned with Rubik 2026 Figma DS.</p>
             <div class="tabpage-tabs" id="colorTabs">
-              <button class="color-tab active" data-tab="dfns-purple">Dfns Purple</button>
+              <button class="color-tab active" data-tab="ultra-purple">Ultra Purple</button>
               <button class="color-tab" data-tab="cold-grey">Cold Grey</button>
               <button class="color-tab" data-tab="steel-grey">Steel Grey</button>
+              <button class="color-tab" data-tab="dark-purple">Dark Purple</button>
+              <button class="color-tab" data-tab="system">System</button>
+              <button class="color-tab" data-tab="semantic">Semantic</button>
             </div>
           </div>
 
-          <div class="color-tab-panel active" id="ctab-dfns-purple">
-            ${buildColorTabPanel('Dfns Purple', 'The core brand purple — from deep aubergine to vibrant lavender. Used for primary backgrounds, key UI elements, and brand expression.', colorData.dfnsPurple, purpleUsage, ['900', '800', '700', '300'])}
+          <div class="color-tab-panel active" id="ctab-ultra-purple">
+            ${buildColorTabPanel('Ultra Purple', 'The core brand purple — from deep aubergine to vibrant lavender. Used for primary backgrounds, key UI elements, and brand expression.', colorData.ultraPurple, purpleUsage, ['900', '800', '700', '300'])}
           </div>
 
           <div class="color-tab-panel" id="ctab-cold-grey">
@@ -3016,6 +3082,24 @@
 
           <div class="color-tab-panel" id="ctab-steel-grey">
             ${buildColorTabPanel('Steel Grey', 'Neutral light greys for surfaces, cards, and subtle dividers. Used extensively in light-mode UI and print materials.', colorData.steelGrey, steelGreyUsage)}
+          </div>
+
+          <div class="color-tab-panel" id="ctab-dark-purple">
+            ${buildColorTabPanel('Dark Purple', 'Dark mode surface palette — elevated backgrounds, cards, and container surfaces for dark UI.', colorData.darkPurple, darkPurpleUsage)}
+          </div>
+
+          <div class="color-tab-panel" id="ctab-system">
+            ${buildColorTabPanel('System', 'Semantic status colors — error, success, info, warning. Each has a 5-level scale (100→900) for backgrounds, indicators, and text.', colorData.systemColors, systemUsage)}
+          </div>
+
+          <div class="color-tab-panel" id="ctab-semantic">
+            <div style="max-width:900px">
+              <p class="section-desc" style="margin-bottom:24px">Semantic variables from Rubik 2026 — these auto-switch between light and dark mode. Use these in production instead of raw color tokens.</p>
+              <h3 style="font-weight:300;font-size:22px;letter-spacing:-0.03em;margin-bottom:16px;color:var(--text-primary)">Light Mode</h3>
+              ${buildColorStrips(colorData.semanticLight)}
+              <h3 style="font-weight:300;font-size:22px;letter-spacing:-0.03em;margin:32px 0 16px;color:var(--text-primary)">Dark Mode</h3>
+              ${buildColorStrips(colorData.semanticDark)}
+            </div>
           </div>
         </div>
       `;
@@ -3138,14 +3222,14 @@
                 <span class="color-family-name">Heading Scale</span>
                 <span class="color-family-count">5 levels</span>
               </div>
-              <p class="section-desc" style="margin-top:-8px">All headings use Suisse Int'l with tight negative letter-spacing. <strong>H1 and H2 are always dual-tone</strong>: Book (350) for the key concept in Cold Grey Deep / White, Light (300) for the continuation in Purple 700 / Purple 300. H3–H5 use Light (300) in a single colour. Source: Figma Master Material.</p>
+              <p class="section-desc" style="margin-top:-8px">All headings use Suisse Int'l with tight negative letter-spacing. <strong>H1 and H2 are always dual-tone</strong>: Book (350) for the key concept in Cold Grey 700 / White, Light (300) for the continuation in Ultra Purple 700 / Ultra Purple 300. H3–H5 use Light (300) in a single colour. Source: Figma Master Material.</p>
             </div>
 
             <div class="color-family" style="margin-top:8px;margin-bottom:12px">
               <div class="color-family-header">
                 <span class="color-family-name">Dual-Tone — H1 & H2</span>
               </div>
-              <p class="section-desc" style="margin-top:-8px">Deux graisses + deux couleurs simultanément : <strong>Book (350) → Cold Grey Deep (light) / Blanc (dark)</strong> · <strong>Light (300) → Purple 700 (light) / Purple 300 (dark)</strong>.</p>
+              <p class="section-desc" style="margin-top:-8px">Deux graisses + deux couleurs simultanément : <strong>Book (350) → Cold Grey 700 (light) / Blanc (dark)</strong> · <strong>Light (300) → Ultra Purple 700 (light) / Ultra Purple 300 (dark)</strong>.</p>
             </div>
 
             <!-- H1 Dual-Tone — 2 colonnes dark / light -->
@@ -3168,11 +3252,11 @@
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                       <span style="width:10px;height:10px;border-radius:2px;background:#AA8BFF;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#AA8BFF</code><span>— Light 300 · Purple 300</span>
+                      <code style="font-family:'SF Mono',monospace">#AA8BFF</code><span>— Light 300 · Ultra Purple 300</span>
                     </div>
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                       <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Book 350 · Cold Grey Light</span>
+                      <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Book 350 · Cold Grey 100</span>
                     </div>
                   </div>
                 </div>
@@ -3186,11 +3270,11 @@
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                       <span style="width:10px;height:10px;border-radius:2px;background:#442599;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#442599</code><span>— Light 300 · Purple 700</span>
+                      <code style="font-family:'SF Mono',monospace">#442599</code><span>— Light 300 · Ultra Purple 700</span>
                     </div>
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                       <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Book 350 · Cold Grey Deep</span>
+                      <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Book 350 · Cold Grey 700</span>
                     </div>
                   </div>
                 </div>
@@ -3218,11 +3302,11 @@
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                       <span style="width:10px;height:10px;border-radius:2px;background:#AA8BFF;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#AA8BFF</code><span>— Light 300 · Purple 300</span>
+                      <code style="font-family:'SF Mono',monospace">#AA8BFF</code><span>— Light 300 · Ultra Purple 300</span>
                     </div>
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                       <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Book 350 · Cold Grey Light</span>
+                      <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Book 350 · Cold Grey 100</span>
                     </div>
                   </div>
                 </div>
@@ -3236,11 +3320,11 @@
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                       <span style="width:10px;height:10px;border-radius:2px;background:#442599;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#442599</code><span>— Light 300 · Purple 700</span>
+                      <code style="font-family:'SF Mono',monospace">#442599</code><span>— Light 300 · Ultra Purple 700</span>
                     </div>
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                       <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Book 350 · Cold Grey Deep</span>
+                      <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Book 350 · Cold Grey 700</span>
                     </div>
                   </div>
                 </div>
@@ -3263,7 +3347,7 @@
                   <div style="font-family:var(--font);font-size:clamp(16px,1.8vw,26px);font-weight:300;line-height:1.15;letter-spacing:-0.03em;color:#E0E3F0;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain</div>
                   <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                     <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
-                    <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Light 300 · Cold Grey Light</span>
+                    <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Light 300 · Cold Grey 100</span>
                   </div>
                 </div>
                 <div style="padding:24px;background:#F0F1F4">
@@ -3271,7 +3355,7 @@
                   <div style="font-family:var(--font);font-size:clamp(16px,1.8vw,26px);font-weight:300;line-height:1.15;letter-spacing:-0.03em;color:#363A5B;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain</div>
                   <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                     <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
-                    <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Light 300 · Cold Grey Deep</span>
+                    <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Light 300 · Cold Grey 700</span>
                   </div>
                 </div>
               </div>
@@ -3293,7 +3377,7 @@
                   <div style="font-family:var(--font);font-size:clamp(14px,1.4vw,20px);font-weight:300;line-height:1.1;letter-spacing:-0.0445em;color:#E0E3F0;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain across your stack</div>
                   <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                     <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
-                    <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Light 300 · Cold Grey Light</span>
+                    <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Light 300 · Cold Grey 100</span>
                   </div>
                 </div>
                 <div style="padding:24px;background:#F0F1F4">
@@ -3301,7 +3385,7 @@
                   <div style="font-family:var(--font);font-size:clamp(14px,1.4vw,20px);font-weight:300;line-height:1.1;letter-spacing:-0.0445em;color:#363A5B;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain across your stack</div>
                   <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                     <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
-                    <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Light 300 · Cold Grey Deep</span>
+                    <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Light 300 · Cold Grey 700</span>
                   </div>
                 </div>
               </div>
@@ -3323,7 +3407,7 @@
                   <div style="font-family:var(--font);font-size:14px;font-weight:300;line-height:1.2;letter-spacing:-0.02em;color:#E0E3F0;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain across your entire stack</div>
                   <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                     <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
-                    <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Light 300 · Cold Grey Light</span>
+                    <code style="font-family:'SF Mono',monospace">#E0E3F0</code><span>— Light 300 · Cold Grey 100</span>
                   </div>
                 </div>
                 <div style="padding:24px;background:#F0F1F4">
@@ -3331,7 +3415,7 @@
                   <div style="font-family:var(--font);font-size:14px;font-weight:300;line-height:1.2;letter-spacing:-0.02em;color:#363A5B;margin-bottom:16px">One Operating Infrastructure to Do Everything Onchain across your entire stack</div>
                   <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                     <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
-                    <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Light 300 · Cold Grey Deep</span>
+                    <code style="font-family:'SF Mono',monospace">#363A5B</code><span>— Light 300 · Cold Grey 700</span>
                   </div>
                 </div>
               </div>
@@ -3927,15 +4011,15 @@
               <p class="section-desc" style="margin-top:-8px">Heroicons use <code class="code-inline">currentColor</code> and adapt to any color via CSS. In Dfns interfaces, apply these color rules:</p>
               <div class="color-tip" style="margin-bottom:10px;margin-top:12px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Light UI</strong> — Use Purple 900 <code class="code-inline">#170C33</code> or Dark Cold Grey <code class="code-inline">#575C7B</code> for default icon color.</span>
+                <span><strong>Light UI</strong> — Use Ultra Purple 900 <code class="code-inline">#170C33</code> or Cold Grey 600 <code class="code-inline">#575C7B</code> for default icon color.</span>
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Dark UI</strong> — Use white or Steel Grey 300 <code class="code-inline">#E3E4EB</code> for default, Purple 300 <code class="code-inline">#AA8BFF</code> for accent.</span>
+                <span><strong>Dark UI</strong> — Use white or Steel Grey 300 <code class="code-inline">#E3E4EB</code> for default, Ultra Purple 300 <code class="code-inline">#AA8BFF</code> for accent.</span>
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Interactive</strong> — Use Purple 800 <code class="code-inline">#2D1866</code> for clickable icon actions (buttons, links).</span>
+                <span><strong>Interactive</strong> — Use Ultra Purple 800 <code class="code-inline">#2D1866</code> for clickable icon actions (buttons, links).</span>
               </div>
             </div>
           </div>
@@ -3987,7 +4071,7 @@
                 <div style="display:flex;gap:20px;color:#170C33">
                   ${renderHeroicon('shieldCheck')}${renderHeroicon('key')}${renderHeroicon('lockClosed')}${renderHeroicon('bell')}
                 </div>
-                <span style="font-size:13px;color:#170C33;opacity:0.6">Light background — Purple 900</span>
+                <span style="font-size:13px;color:#170C33;opacity:0.6">Light background — Ultra Purple 900</span>
               </div>
               <div style="background:#170C33;border-radius:16px;padding:40px;display:flex;flex-direction:column;align-items:center;gap:16px">
                 <div style="display:flex;gap:20px;color:#E3E4EB">
@@ -4176,7 +4260,7 @@
 
             <div class="color-family" style="margin-top:40px">
               <div class="color-family-header"><span class="color-family-name">Color Palette for Illustrations</span></div>
-              <p class="section-desc" style="margin-top:-8px">Illustrations should exclusively use the brand palette. The primary palette is Purple 300 for accents.</p>
+              <p class="section-desc" style="margin-top:-8px">Illustrations should exclusively use the brand palette. The primary palette is Ultra Purple 300 for accents.</p>
               <div class="imagery-gradient-strip" style="margin-top:16px">
                 <div class="imagery-gradient-card" style="background:#170C33"><span class="imagery-gradient-label">Backgrounds</span></div>
                 <div class="imagery-gradient-card" style="background:#442599"><span class="imagery-gradient-label">Structure</span></div>
@@ -4286,7 +4370,7 @@
                 </div>
                 <div class="imagery-card-body">
                   <div class="imagery-card-title">Analytics & Metrics</div>
-                  <div class="imagery-card-desc">Dashboard KPIs, charts, and graphs. Use the purple accent for data lines and Purple 300 for highlights and callouts.</div>
+                  <div class="imagery-card-desc">Dashboard KPIs, charts, and graphs. Use the purple accent for data lines and Ultra Purple 300 for highlights and callouts.</div>
                 </div>
               </div>
             </div>
@@ -4333,7 +4417,7 @@
               <div class="color-family-header">
                 <span class="color-family-name">Approved Gradients</span>
               </div>
-              <p class="section-desc" style="margin-top:-8px">These are the only gradients approved for use across brand materials. They are built exclusively from the Dfns Purple scale.</p>
+              <p class="section-desc" style="margin-top:-8px">These are the only gradients approved for use across brand materials. They are built exclusively from the Ultra Purple scale.</p>
             </div>
 
             <div class="imagery-gradient-strip" style="margin-bottom:32px">
@@ -4347,7 +4431,7 @@
               <div class="color-family-header">
                 <span class="color-family-name">Duotone Treatment</span>
               </div>
-              <p class="section-desc" style="margin-top:-8px">For photography on brand surfaces, apply a duotone filter using Purple 900 as shadows and Purple 500 as highlights. This unifies diverse imagery under a cohesive visual identity.</p>
+              <p class="section-desc" style="margin-top:-8px">For photography on brand surfaces, apply a duotone filter using Ultra Purple 900 as shadows and Ultra Ultra Purple 500 as highlights. This unifies diverse imagery under a cohesive visual identity.</p>
               <div class="imagery-example-row" style="margin-top:16px">
                 <div class="imagery-example" style="background:linear-gradient(135deg, #170C33, #363A5B);min-height:160px">
                   <svg width="80" height="60" viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="4" fill="rgba(255,255,255,0.05)"/><circle cx="28" cy="24" r="12" fill="rgba(105,58,234,0.2)" stroke="rgba(105,58,234,0.3)"/><path d="M5 50 Q20 30, 40 38 Q60 46, 75 32" stroke="rgba(105,58,234,0.2)" fill="rgba(23,12,51,0.3)"/></svg>
@@ -4376,7 +4460,7 @@
               </div>
               <div class="color-tip">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span><strong>Don't</strong> — Avoid using Purple 300 <code class="code-inline">#AA8BFF</code> in gradients — it is reserved for flat accent elements only.</span>
+                <span><strong>Don't</strong> — Avoid using Ultra Purple 300 <code class="code-inline">#AA8BFF</code> in gradients — it is reserved for flat accent elements only.</span>
               </div>
             </div>
           </div>
