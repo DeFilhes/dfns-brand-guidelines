@@ -19,8 +19,8 @@
     @font-face { font-family: 'Suisse Intl'; src: url('./Fonts/web files/SuisseIntl-SemiboldIt.woff2') format('woff2'); font-weight: 600; font-style: italic; font-display: swap; }
     @font-face { font-family: 'Suisse Intl'; src: url('./Fonts/web files/SuisseIntl-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Suisse Intl'; src: url('./Fonts/web files/SuisseIntl-BoldIt.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
-    @font-face { font-family: 'Suisse Intl'; src: url('./Fonts/web files/SuisseIntl-Book.woff2') format('woff2'); font-weight: 350; font-style: normal; font-display: swap; }
-    @font-face { font-family: 'Suisse Intl'; src: url('./Fonts/web files/SuisseIntl-BookIt.woff2') format('woff2'); font-weight: 350; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('./Fonts/web files/SuisseIntl-Book.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Suisse Intl'; src: url('./Fonts/web files/SuisseIntl-BookIt.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
     @font-face { font-family: 'Suisse Intl'; src: url('./Fonts/web files/SuisseIntl-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Suisse Intl'; src: url('./Fonts/web files/SuisseIntl-LightIt.woff2') format('woff2'); font-weight: 300; font-style: italic; font-display: swap; }
     @font-face { font-family: 'Suisse Intl'; src: url('./Fonts/web files/SuisseIntl-Thin.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
@@ -97,7 +97,7 @@
 
       /* Dual-tone headings (dark mode) — H1 & H2
          light    = Light 300 → Ultra Purple 300 #AA8BFF  — 1ère ligne
-         emphasis = Book 350 → Cold Grey 100 #E0E3F0 — 2ème ligne */
+         emphasis = Regular 400 → Cold Grey 100 #E0E3F0 — 2ème ligne */
       --h1-emphasis: #E0E3F0;
       --h1-light: #AA8BFF;
       --h2-emphasis: #E0E3F0;
@@ -146,7 +146,7 @@
       --code-bg: #E8EAF0;
 
       /* Dual-tone headings (light mode) — H1 & H2
-         emphasis = Book 350 → Cold Grey 700
+         emphasis = Regular 400 → Cold Grey 700
          light    = Light 300 → Ultra Purple 700 (accent light) */
       --h1-emphasis: #363A5B;
       --h1-light: #442599;
@@ -591,7 +591,7 @@
     }
 
     /* ── Dual-Tone Headings — H1 & H2 ─────────────────────
-       Contrast rule: Book (350) emphasis / Light (300) secondary
+       Contrast rule: Regular (400) emphasis / Light (300) secondary
        Two weights + two colors on every dual-tone heading.
     ──────────────────────────────────────────────────────── */
     .h1-dual {
@@ -601,7 +601,7 @@
       letter-spacing: 0;
     }
     .h1-dual .emphasis {
-      font-weight: 350;       /* Book — heavier half */
+      font-weight: 400;       /* Book — heavier half */
       color: var(--h1-emphasis);
     }
     .h1-dual .light {
@@ -616,7 +616,7 @@
       letter-spacing: 0;
     }
     .h2-dual .emphasis {
-      font-weight: 350;       /* Book — heavier half */
+      font-weight: 400;       /* Book — heavier half */
       color: var(--h2-emphasis);
     }
     .h2-dual .light {
@@ -3144,30 +3144,15 @@
             <div class="color-family">
               <div class="color-family-header">
                 <span class="color-family-name">Weights</span>
-                <span class="color-family-count">9 weights</span>
+                <span class="color-family-count">4 weights</span>
               </div>
             </div>
 
             <div class="type-weights-grid">
               <div class="type-weight-card">
-                <div class="type-weight-card-preview" style="font-weight:100">Ag</div>
-                <div class="type-weight-card-name">Hairline</div>
-                <div class="type-weight-card-value">100</div>
-              </div>
-              <div class="type-weight-card">
-                <div class="type-weight-card-preview" style="font-weight:200">Ag</div>
-                <div class="type-weight-card-name">Thin</div>
-                <div class="type-weight-card-value">200</div>
-              </div>
-              <div class="type-weight-card">
                 <div class="type-weight-card-preview" style="font-weight:300">Ag</div>
                 <div class="type-weight-card-name">Light</div>
                 <div class="type-weight-card-value">300</div>
-              </div>
-              <div class="type-weight-card">
-                <div class="type-weight-card-preview" style="font-weight:350">Ag</div>
-                <div class="type-weight-card-name">Book</div>
-                <div class="type-weight-card-value">350</div>
               </div>
               <div class="type-weight-card">
                 <div class="type-weight-card-preview" style="font-weight:400">Ag</div>
@@ -3183,16 +3168,6 @@
                 <div class="type-weight-card-preview" style="font-weight:600">Ag</div>
                 <div class="type-weight-card-name">Semibold</div>
                 <div class="type-weight-card-value">600</div>
-              </div>
-              <div class="type-weight-card">
-                <div class="type-weight-card-preview" style="font-weight:700">Ag</div>
-                <div class="type-weight-card-name">Bold</div>
-                <div class="type-weight-card-value">700</div>
-              </div>
-              <div class="type-weight-card">
-                <div class="type-weight-card-preview" style="font-weight:900">Ag</div>
-                <div class="type-weight-card-name">Black</div>
-                <div class="type-weight-card-value">900</div>
               </div>
             </div>
 
@@ -3222,14 +3197,14 @@
                 <span class="color-family-name">Heading Scale</span>
                 <span class="color-family-count">5 levels</span>
               </div>
-              <p class="section-desc" style="margin-top:-8px">All headings use Suisse Int'l with letter-spacing 0. <strong>H1 and H2 are always dual-tone</strong>: Book (350) for the key concept in Cold Grey 700 / White, Light (300) for the continuation in Ultra Purple 700 / Ultra Purple 300. H3–H5 use Light (300) in a single colour. Source: Rubik 2026.</p>
+              <p class="section-desc" style="margin-top:-8px">All headings use Suisse Int'l with letter-spacing 0. <strong>H1 and H2 are always dual-tone</strong>: Regular (400) for the key concept in Cold Grey 700 / White, Light (300) for the continuation in Ultra Purple 700 / Ultra Purple 300. H3–H5 use Light (300) in a single colour. Source: Rubik 2026.</p>
             </div>
 
             <div class="color-family" style="margin-top:8px;margin-bottom:12px">
               <div class="color-family-header">
                 <span class="color-family-name">Dual-Tone — H1 & H2</span>
               </div>
-              <p class="section-desc" style="margin-top:-8px">Deux graisses + deux couleurs simultanément : <strong>Book (350) → Cold Grey 700 (light) / Blanc (dark)</strong> · <strong>Light (300) → Ultra Purple 700 (light) / Ultra Purple 300 (dark)</strong>.</p>
+              <p class="section-desc" style="margin-top:-8px">Deux graisses + deux couleurs simultanément : <strong>Regular (400) → Cold Grey 700 (light) / Blanc (dark)</strong> · <strong>Light (300) → Ultra Purple 700 (light) / Ultra Purple 300 (dark)</strong>.</p>
             </div>
 
             <!-- H1 Dual-Tone — 2 colonnes dark / light -->
@@ -3237,7 +3212,7 @@
               <div style="padding:14px 20px;border-bottom:1px solid var(--border-subtle);display:flex;gap:8px;flex-wrap:wrap;background:var(--bg-surface)">
                 <span class="type-specimen-tag">H1</span>
                 <span class="type-specimen-tag">48px</span>
-                <span class="type-specimen-tag">Book 350 + Light 300</span>
+                <span class="type-specimen-tag">Regular 400 + Light 300</span>
                 <span class="type-specimen-tag">Line auto</span>
                 <span class="type-specimen-tag">LS 0</span>
               </div>
@@ -3247,7 +3222,7 @@
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:18px">Dark mode</div>
                   <div style="font-family:var(--font);font-size:clamp(22px,2.5vw,38px);line-height:1.1;letter-spacing:0;margin-bottom:20px">
                     <span style="font-weight:300;color:#AA8BFF;display:block">One Operating</span>
-                    <span style="font-weight:350;color:#E0E3F0;display:block">Infrastructure</span>
+                    <span style="font-weight:400;color:#E0E3F0;display:block">Infrastructure</span>
                   </div>
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
@@ -3256,7 +3231,7 @@
                     </div>
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                       <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'Roboto Mono',monospace">#E0E3F0</code><span>— Book 350 · Cold Grey 100</span>
+                      <code style="font-family:'Roboto Mono',monospace">#E0E3F0</code><span>— Regular 400 · Cold Grey 100</span>
                     </div>
                   </div>
                 </div>
@@ -3265,7 +3240,7 @@
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(30,32,46,0.35);margin-bottom:18px">Light mode</div>
                   <div style="font-family:var(--font);font-size:clamp(22px,2.5vw,38px);line-height:1.1;letter-spacing:0;margin-bottom:20px">
                     <span style="font-weight:300;color:#442599;display:block">One Operating</span>
-                    <span style="font-weight:350;color:#363A5B;display:block">Infrastructure</span>
+                    <span style="font-weight:400;color:#363A5B;display:block">Infrastructure</span>
                   </div>
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
@@ -3274,7 +3249,7 @@
                     </div>
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                       <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'Roboto Mono',monospace">#363A5B</code><span>— Book 350 · Cold Grey 700</span>
+                      <code style="font-family:'Roboto Mono',monospace">#363A5B</code><span>— Regular 400 · Cold Grey 700</span>
                     </div>
                   </div>
                 </div>
@@ -3287,7 +3262,7 @@
               <div style="padding:14px 20px;border-bottom:1px solid var(--border-subtle);display:flex;gap:8px;flex-wrap:wrap;background:var(--bg-surface)">
                 <span class="type-specimen-tag">H2</span>
                 <span class="type-specimen-tag">36px</span>
-                <span class="type-specimen-tag">Book 350 + Light 300</span>
+                <span class="type-specimen-tag">Regular 400 + Light 300</span>
                 <span class="type-specimen-tag">Line auto</span>
                 <span class="type-specimen-tag">LS 0</span>
               </div>
@@ -3297,7 +3272,7 @@
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:18px">Dark mode</div>
                   <div style="font-family:var(--font);font-size:clamp(18px,2vw,30px);line-height:1.1;letter-spacing:0;margin-bottom:20px">
                     <span style="font-weight:300;color:#AA8BFF;display:block">One Operating Infrastructure</span>
-                    <span style="font-weight:350;color:#E0E3F0;display:block">to Do Everything Onchain</span>
+                    <span style="font-weight:400;color:#E0E3F0;display:block">to Do Everything Onchain</span>
                   </div>
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
@@ -3306,7 +3281,7 @@
                     </div>
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,0.45)">
                       <span style="width:10px;height:10px;border-radius:2px;background:#E0E3F0;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'Roboto Mono',monospace">#E0E3F0</code><span>— Book 350 · Cold Grey 100</span>
+                      <code style="font-family:'Roboto Mono',monospace">#E0E3F0</code><span>— Regular 400 · Cold Grey 100</span>
                     </div>
                   </div>
                 </div>
@@ -3315,7 +3290,7 @@
                   <div style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(30,32,46,0.35);margin-bottom:18px">Light mode</div>
                   <div style="font-family:var(--font);font-size:clamp(18px,2vw,30px);line-height:1.1;letter-spacing:0;margin-bottom:20px">
                     <span style="font-weight:300;color:#442599;display:block">One Operating Infrastructure</span>
-                    <span style="font-weight:350;color:#363A5B;display:block">to Do Everything Onchain</span>
+                    <span style="font-weight:400;color:#363A5B;display:block">to Do Everything Onchain</span>
                   </div>
                   <div style="display:flex;flex-direction:column;gap:7px">
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
@@ -3324,7 +3299,7 @@
                     </div>
                     <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#575C7B">
                       <span style="width:10px;height:10px;border-radius:2px;background:#363A5B;flex-shrink:0;display:inline-block"></span>
-                      <code style="font-family:'Roboto Mono',monospace">#363A5B</code><span>— Book 350 · Cold Grey 700</span>
+                      <code style="font-family:'Roboto Mono',monospace">#363A5B</code><span>— Regular 400 · Cold Grey 700</span>
                     </div>
                   </div>
                 </div>
@@ -3445,7 +3420,7 @@
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Do</strong> — Toujours appliquer le dual-tone sur H1 et H2. C'est la signature typographique Dfns : <strong>Book (350) pour le concept clé</strong>, Light (300) pour la suite.</span>
+                <span><strong>Do</strong> — Toujours appliquer le dual-tone sur H1 et H2. C'est la signature typographique Dfns : <strong>Regular (400) pour le concept clé</strong>, Light (300) pour la suite.</span>
               </div>
               <div class="color-tip" style="margin-bottom:10px">
                 <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
