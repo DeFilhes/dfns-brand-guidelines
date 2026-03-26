@@ -2292,7 +2292,6 @@
         sections: [
           { id: 'logomark', title: 'Logomark' },
           { id: 'full-logo', title: 'Full Logo' },
-          { id: 'clear-space', title: 'Clear Space' },
           { id: 'misuse', title: 'Misuse' }
         ]
       },
@@ -3721,7 +3720,6 @@
             <div class="tabpage-tabs" id="logoTabs">
               <button class="color-tab active" data-tab="logomark" data-tabgroup="logo">Logomark</button>
               <button class="color-tab" data-tab="full-logo" data-tabgroup="logo">Full Logo</button>
-              <button class="color-tab" data-tab="clear-space" data-tabgroup="logo">Clear Space</button>
               <button class="color-tab" data-tab="misuse" data-tabgroup="logo">Misuse</button>
             </div>
           </div>
@@ -3833,39 +3831,6 @@
             </div>
           </div>
 
-          <!-- Clear Space -->
-          <div class="color-tab-panel" id="ltab-clear-space">
-            <div class="color-family">
-              <div class="color-family-header">
-                <span class="color-family-name">Clear Space</span>
-              </div>
-              <p class="section-desc" style="margin-top:-8px">Maintain adequate breathing room around the logo. The minimum clear space is equal to the height of the inner cube (marked as "x").</p>
-            </div>
-
-            <div class="clearspace-diagram">
-              <div class="clearspace-inner">
-                <span class="clearspace-label top">x</span>
-                <span class="clearspace-label bottom">x</span>
-                <span class="clearspace-label left">x</span>
-                <span class="clearspace-label right">x</span>
-                ${logoSVG.color}
-              </div>
-            </div>
-
-            <div class="color-family" style="margin-top:40px">
-              <div class="color-family-header"><span class="color-family-name">Minimum Size</span></div>
-              <p class="section-desc" style="margin-top:-8px">To ensure legibility, never scale the logomark below these thresholds.</p>
-              <div class="color-tip" style="margin-bottom:10px">
-                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Digital</strong> — Minimum 24px height for the logomark, 120px width for the full logo.</span>
-              </div>
-              <div class="color-tip">
-                <svg class="color-tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Print</strong> — Minimum 8mm height for the logomark, 30mm width for the full logo.</span>
-              </div>
-            </div>
-          </div>
-
           <!-- Misuse -->
           <div class="color-tab-panel" id="ltab-misuse">
             <div class="color-family">
@@ -3878,39 +3843,51 @@
             <div class="misuse-grid">
               <div class="misuse-card">
                 <div class="misuse-card-visual" style="background:var(--bg-surface)">
-                  <div style="transform:scaleX(1.5)">${logoSVG.flat}</div>
+                  <div style="transform:scaleX(1.6) scaleY(0.8)">${logoSVG.lightSymbol}</div>
                 </div>
                 <div class="misuse-card-label bad">Don't stretch or distort</div>
               </div>
               <div class="misuse-card">
                 <div class="misuse-card-visual" style="background:var(--bg-surface)">
-                  <div style="transform:rotate(25deg)">${logoSVG.flat}</div>
+                  <div style="transform:rotate(25deg)">${logoSVG.lightSymbol}</div>
                 </div>
                 <div class="misuse-card-label bad">Don't rotate the logo</div>
               </div>
               <div class="misuse-card">
                 <div class="misuse-card-visual" style="background:var(--bg-surface)">
-                  <div style="opacity:0.3">${logoSVG.flat}</div>
+                  <div style="opacity:0.2">${logoSVG.lightSymbol}</div>
                 </div>
                 <div class="misuse-card-label bad">Don't reduce opacity</div>
               </div>
               <div class="misuse-card">
                 <div class="misuse-card-visual" style="background:linear-gradient(135deg,#ff6b6b,#ffd93d)">
-                  <div style="filter:brightness(0) invert(1)">${logoSVG.flat}</div>
+                  <div style="filter:brightness(0) invert(1)">${logoSVG.lightSymbol}</div>
                 </div>
                 <div class="misuse-card-label bad">Don't place on clashing backgrounds</div>
               </div>
               <div class="misuse-card">
                 <div class="misuse-card-visual" style="background:var(--bg-surface)">
-                  <div style="filter:drop-shadow(4px 4px 8px rgba(255,255,255,0.5))">${logoSVG.flat}</div>
+                  <div style="filter:drop-shadow(4px 4px 10px rgba(0,0,0,0.4))">${logoSVG.lightSymbol}</div>
                 </div>
                 <div class="misuse-card-label bad">Don't add shadows or effects</div>
               </div>
               <div class="misuse-card">
                 <div class="misuse-card-visual" style="background:var(--bg-surface)">
-                  <div style="filter:hue-rotate(90deg)">${logoSVG.color}</div>
+                  <div style="filter:hue-rotate(120deg) saturate(2)">${logoSVG.lightSymbol}</div>
                 </div>
                 <div class="misuse-card-label bad">Don't change the logo colors</div>
+              </div>
+              <div class="misuse-card">
+                <div class="misuse-card-visual" style="background:var(--bg-surface)">
+                  <div style="filter:blur(2px)">${logoSVG.lightSymbol}</div>
+                </div>
+                <div class="misuse-card-label bad">Don't blur or soften the logo</div>
+              </div>
+              <div class="misuse-card">
+                <div class="misuse-card-visual" style="background:var(--bg-surface)">
+                  <div style="border:3px solid #ff4444;border-radius:50%;padding:8px;display:inline-flex">${logoSVG.lightSymbol}</div>
+                </div>
+                <div class="misuse-card-label bad">Don't add outlines or containers</div>
               </div>
             </div>
           </div>
