@@ -1579,7 +1579,8 @@
       background: var(--bg-surface);
     }
 
-    .misuse-card-visual svg { max-width: 80px; height: auto; }
+    .misuse-card-visual svg { width: 80px; height: 70px; }
+    .misuse-card-visual > div { display: flex; align-items: center; justify-content: center; }
 
     .misuse-card-label {
       padding: 14px 16px;
@@ -3732,9 +3733,11 @@
                 <span class="color-family-count">2 modes</span>
               </div>
               <p class="section-desc" style="margin-top:-8px">The universal symbolism of the hexagon:</p>
-              <p class="section-desc" style="margin-top:8px"><strong>Molecular structure</strong> — the hexagon is the most stable and efficient shape found in nature.</p>
-              <p class="section-desc" style="margin-top:8px"><strong>Security</strong> — in tech and military iconography, the hexagon is associated with shields, secure networks, and nodes.</p>
-              <p class="section-desc" style="margin-top:8px"><strong>Distributed network</strong> — The hexagon is considered a powerful symbol in geometry due to its perfect symmetry and balance. It is believed to represent the harmony between a closed yet interconnected system. The central negative space forms the perspective of a cube but also an arrow — illustrating the gateway to the blockchain world.</p>
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:12px">
+                <p class="section-desc" style="font-size:12px;line-height:1.6;margin:0"><strong>Molecular structure</strong> — the hexagon is the most stable and efficient shape found in nature.</p>
+                <p class="section-desc" style="font-size:12px;line-height:1.6;margin:0"><strong>Security</strong> — in tech and military iconography, the hexagon is associated with shields, secure networks, and nodes.</p>
+                <p class="section-desc" style="font-size:12px;line-height:1.6;margin:0"><strong>Distributed network</strong> — The hexagon is considered a powerful symbol in geometry due to its perfect symmetry and balance. It is believed to represent the harmony between a closed yet interconnected system. The central negative space forms the perspective of a cube but also an arrow — illustrating the gateway to the blockchain world.</p>
+              </div>
             </div>
 
             <div class="logo-showcase" style="grid-template-columns: 1fr 1fr;">
